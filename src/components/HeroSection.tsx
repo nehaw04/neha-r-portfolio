@@ -23,7 +23,7 @@ const HeroSection = () => {
           <div className="relative mb-8 opacity-0 animate-scale-in">
             <div className="w-44 h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-primary/20 glow">
               <div className="w-full h-full bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center">
-                <span className="text-6xl md:text-7xl font-bold gradient-text">UG</span>
+                <span className="text-6xl md:text-7xl font-bold gradient-text">NR</span>
               </div>
             </div>
             {/* Status Badge */}
@@ -40,23 +40,23 @@ const HeroSection = () => {
 
           {/* Name */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 opacity-0 animate-fade-in animation-delay-200">
-            <span className="gradient-text">Your Name</span>
+            <span className="gradient-text">Neha R</span>
           </h1>
 
           {/* Role */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-6 opacity-0 animate-fade-in animation-delay-300">
-            <span className="text-foreground">AI & ML Specialist</span>
+            <span className="text-foreground">AI & ML Engineer</span>
             <span className="mx-3">•</span>
-            <span className="text-foreground">Full-Stack Developer</span>
+            <span className="text-foreground">NLP Specialist</span>
             <span className="mx-3">•</span>
-            <span className="text-foreground">Data Analyst</span>
+            <span className="text-foreground">Process Automation</span>
           </p>
 
           {/* Description */}
           <p className="text-muted-foreground text-lg max-w-2xl mb-10 leading-relaxed opacity-0 animate-fade-in animation-delay-400">
-            Passionate about building intelligent systems and scalable web applications.
-            Specialized in machine learning implementation, modern web technologies, and
-            transforming data into actionable insights.
+            Turning complex problems into elegant AI solutions. Specializing in Multi-Agent Systems, 
+            NLP, and Intelligent Process Automation for the BFSI sector — building responsible AI 
+            that drives real operational impact.
           </p>
 
           {/* CTA Buttons */}
@@ -68,13 +68,15 @@ const HeroSection = () => {
               <Briefcase className="mr-2 h-5 w-5" />
               View Projects
             </Button>
-            <Button
-              variant="outline"
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-lg rounded-xl transition-all duration-300"
-            >
-              <FileText className="mr-2 h-5 w-5" />
-              Download Resume
-            </Button>
+            <a href="/Neha_R_Resume.pdf" download>
+              <Button
+                variant="outline"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-lg rounded-xl transition-all duration-300"
+              >
+                <FileText className="mr-2 h-5 w-5" />
+                Download Resume
+              </Button>
+            </a>
           </div>
 
           {/* Scroll Indicator */}

@@ -50,7 +50,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="text-2xl font-bold gradient-text">
-          UG.
+          NR.
         </a>
 
         {/* Desktop Navigation */}

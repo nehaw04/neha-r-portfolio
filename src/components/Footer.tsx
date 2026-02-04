@@ -1,11 +1,10 @@
-import { Github, Linkedin, Twitter, Mail, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-  { icon: Mail, href: 'mailto:hello@example.com', label: 'Email' },
+  { icon: Github, href: 'https://github.com/nehaw04', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/nehxr', label: 'LinkedIn' },
+  { icon: Mail, href: 'mailto:nehar.xiaeroor@gmail.com', label: 'Email' },
 ];
 
 const Footer = () => {
@@ -35,8 +34,8 @@ const Footer = () => {
                 Let's Build Something <span className="gradient-text">Amazing</span>
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Crafting intelligent digital solutions through clean code, innovative design, 
-                and a passion for solving complex problems.
+                Turning complexity into clarity — building AI systems that think, automate, 
+                and deliver real-world impact with every line of code.
               </p>
             </div>
 
@@ -66,7 +65,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center">
             <p className="text-muted-foreground text-sm">
-              © 2026 Your Name. Crafted with passion and code.
+              © 2026 Neha R. Crafted with passion and code.
             </p>
           </div>
         </div>
