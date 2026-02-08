@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   const scrollToProjects = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -35,28 +35,23 @@ const HeroSection = () => {
 
           {/* Greeting */}
           <p className="text-muted-foreground text-lg mb-2 opacity-0 animate-fade-in animation-delay-100">
-            Hello, I'm
+            Hi, I'm
           </p>
 
           {/* Name */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 opacity-0 animate-fade-in animation-delay-200">
-            <span className="gradient-text">Neha R</span>
+            <span className="gradient-text">Neha R.</span>
           </h1>
 
-          {/* Role */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-6 opacity-0 animate-fade-in animation-delay-300">
-            <span className="text-foreground">AI & ML Engineer</span>
-            <span className="mx-3">•</span>
-            <span className="text-foreground">NLP Specialist</span>
-            <span className="mx-3">•</span>
-            <span className="text-foreground">Process Automation</span>
+          {/* Tagline */}
+          <p className="text-xl md:text-2xl font-medium text-foreground mb-4 opacity-0 animate-fade-in animation-delay-300">
+            Bridging the Gap Between AI Innovation & Enterprise Solutions.
           </p>
 
           {/* Description */}
           <p className="text-muted-foreground text-lg max-w-2xl mb-10 leading-relaxed opacity-0 animate-fade-in animation-delay-400">
-            Turning complex problems into elegant AI solutions. Specializing in Multi-Agent Systems, 
-            NLP, and Intelligent Process Automation for the BFSI sector — building responsible AI 
-            that drives real operational impact.
+            Pre-final year Integrated M.Tech student at VIT Bhopal specializing in AIML. 
+            I build privacy-first AI systems, agentic workflows, and scalable Salesforce solutions.
           </p>
 
           {/* CTA Buttons */}
@@ -81,7 +76,7 @@ const HeroSection = () => {
 
           {/* Scroll Indicator */}
           <button
-            onClick={scrollToProjects}
+            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors animate-bounce"
             aria-label="Scroll down"
           >

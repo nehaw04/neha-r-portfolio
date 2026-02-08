@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-type SkillCategory = 'all' | 'frontend' | 'backend' | 'aiml' | 'database' | 'devtools';
+type SkillCategory = 'all' | 'languages' | 'aiml' | 'platforms' | 'strengths';
 
 interface Skill {
   name: string;
@@ -9,52 +9,37 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  // Programming Languages
-  { name: 'JavaScript', icon: '🟨', category: ['all', 'frontend', 'backend'] },
-  { name: 'Python', icon: '🐍', category: ['all', 'backend', 'aiml'] },
-  { name: 'TypeScript', icon: '🔷', category: ['all', 'frontend', 'backend'] },
-  
-  // Frontend
-  { name: 'React', icon: '⚛️', category: ['all', 'frontend'] },
-  { name: 'Next.js', icon: '▲', category: ['all', 'frontend'] },
-  { name: 'Vue.js', icon: '💚', category: ['all', 'frontend'] },
-  { name: 'Tailwind CSS', icon: '🎨', category: ['all', 'frontend'] },
-  { name: 'HTML5', icon: '🌐', category: ['all', 'frontend'] },
-  { name: 'CSS3', icon: '🎭', category: ['all', 'frontend'] },
-  
-  // Backend
-  { name: 'Node.js', icon: '🟢', category: ['all', 'backend'] },
-  { name: 'Express.js', icon: '🚂', category: ['all', 'backend'] },
-  { name: 'REST APIs', icon: '🔌', category: ['all', 'backend'] },
-  
+  // Languages
+  { name: 'Python', icon: '🐍', category: ['all', 'languages'] },
+  { name: 'R', icon: '📊', category: ['all', 'languages'] },
+  { name: 'Apex', icon: '⚡', category: ['all', 'languages'] },
+  { name: 'Java', icon: '☕', category: ['all', 'languages'] },
+
   // AI/ML
-  { name: 'TensorFlow', icon: '🧠', category: ['all', 'aiml'] },
+  { name: 'Transformers', icon: '🤖', category: ['all', 'aiml'] },
+  { name: 'RAG', icon: '🔍', category: ['all', 'aiml'] },
+  { name: 'Agentic AI', icon: '🧠', category: ['all', 'aiml'] },
+  { name: 'OCR', icon: '📄', category: ['all', 'aiml'] },
+  { name: 'Data Mining', icon: '⛏️', category: ['all', 'aiml'] },
   { name: 'PyTorch', icon: '🔥', category: ['all', 'aiml'] },
-  { name: 'Scikit-learn', icon: '📊', category: ['all', 'aiml'] },
-  { name: 'OpenCV', icon: '👁️', category: ['all', 'aiml'] },
-  { name: 'Pandas', icon: '🐼', category: ['all', 'aiml'] },
-  { name: 'NumPy', icon: '🔢', category: ['all', 'aiml'] },
-  
-  // Databases
-  { name: 'MongoDB', icon: '🍃', category: ['all', 'database'] },
-  { name: 'PostgreSQL', icon: '🐘', category: ['all', 'database'] },
-  { name: 'MySQL', icon: '🐬', category: ['all', 'database'] },
-  { name: 'Firebase', icon: '🔥', category: ['all', 'database'] },
-  
-  // DevTools
-  { name: 'Git', icon: '📦', category: ['all', 'devtools'] },
-  { name: 'Docker', icon: '🐳', category: ['all', 'devtools'] },
-  { name: 'VS Code', icon: '💻', category: ['all', 'devtools'] },
-  { name: 'Figma', icon: '🎨', category: ['all', 'devtools'] },
+
+  // Platforms
+  { name: 'Salesforce', icon: '☁️', category: ['all', 'platforms'] },
+  { name: 'AWS', icon: '🌐', category: ['all', 'platforms'] },
+  { name: 'Git/GitHub', icon: '📦', category: ['all', 'platforms'] },
+
+  // Core Strengths
+  { name: 'Competitive Programming', icon: '🏆', category: ['all', 'strengths'] },
+  { name: 'Mathematical Aptitude', icon: '📐', category: ['all', 'strengths'] },
+  { name: 'Logic Building', icon: '🧩', category: ['all', 'strengths'] },
 ];
 
 const categories: { id: SkillCategory; label: string }[] = [
   { id: 'all', label: 'All' },
-  { id: 'frontend', label: 'Frontend' },
-  { id: 'backend', label: 'Backend' },
+  { id: 'languages', label: 'Languages' },
   { id: 'aiml', label: 'AI/ML' },
-  { id: 'database', label: 'Database' },
-  { id: 'devtools', label: 'DevTools' },
+  { id: 'platforms', label: 'Platforms' },
+  { id: 'strengths', label: 'Core Strengths' },
 ];
 
 const SkillsSection = () => {

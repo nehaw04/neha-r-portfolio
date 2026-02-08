@@ -1,10 +1,10 @@
-import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowUp, MapPin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/nehaw04', label: 'GitHub' },
   { icon: Linkedin, href: 'https://www.linkedin.com/in/nehxr', label: 'LinkedIn' },
-  { icon: Mail, href: 'mailto:nehar.xiaeroor@gmail.com', label: 'Email' },
+  { icon: Mail, href: 'mailto:neha.2022@vitbhopal.ac.in', label: 'Email' },
 ];
 
 const Footer = () => {
@@ -14,7 +14,6 @@ const Footer = () => {
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 300);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -28,18 +27,22 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="glass-card rounded-3xl p-8 md:p-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            {/* Left Column - Tagline */}
+            {/* Left Column */}
             <div className="text-center md:text-left max-w-md">
               <h3 className="text-2xl font-bold mb-4">
-                Let's Build Something <span className="gradient-text">Amazing</span>
+                Let's Build Something <span className="gradient-text">Together</span>
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Turning complexity into clarity — building AI systems that think, automate, 
-                and deliver real-world impact with every line of code.
+              <p className="text-muted-foreground leading-relaxed mb-3">
+                I am currently open to internship or project opportunities in AI, 
+                Machine Learning, or Salesforce Development.
               </p>
+              <div className="flex items-center gap-2 text-muted-foreground text-sm justify-center md:justify-start">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span>Bhopal / Kochi · Open to Remote</span>
+              </div>
             </div>
 
-            {/* Right Column - Social Links */}
+            {/* Right Column */}
             <div className="text-center">
               <h4 className="text-lg font-semibold mb-4">Let's Connect</h4>
               <div className="flex gap-3">
@@ -71,7 +74,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Back to Top Button */}
+      {/* Back to Top */}
       <button
         onClick={scrollToTop}
         className={`fixed bottom-8 right-8 w-14 h-14 gradient-bg rounded-full flex items-center justify-center glow hover:glow-strong hover:scale-110 transition-all duration-300 z-50 ${

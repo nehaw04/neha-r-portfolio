@@ -2,8 +2,8 @@ import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import SkillsSection from '@/components/SkillsSection';
-import SoftSkillsSection from '@/components/SoftSkillsSection';
 import ProjectsSection from '@/components/ProjectsSection';
+import SoftSkillsSection from '@/components/SoftSkillsSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
