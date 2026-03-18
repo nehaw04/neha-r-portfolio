@@ -91,13 +91,13 @@
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--glass-border);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
   }
 
   .glass-card:hover {
     border-color: var(--glass-border-hover);
-    box-shadow: 0 16px 48px hsl(263 70% 66% / 0.12);
+    box-shadow: 0 16px 48px hsl(152 60% 42% / 0.1);
   }
 
   /* Gradient Text */
