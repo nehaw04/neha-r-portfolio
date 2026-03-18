@@ -162,8 +162,8 @@
   /* Social Button */
   .social-btn {
     @apply flex items-center justify-center w-12 h-12 rounded-xl transition-all duration-300;
-    background: hsl(263 70% 66% / 0.1);
-    border: 1px solid hsl(263 70% 66% / 0.2);
+    background: hsl(152 60% 42% / 0.1);
+    border: 1px solid hsl(152 60% 42% / 0.15);
   }
 
   .social-btn:hover {
