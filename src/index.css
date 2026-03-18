@@ -185,15 +185,16 @@
   }
 
   .filter-tab:hover {
-    border-color: hsl(263 70% 66% / 0.4);
+    border-color: hsl(152 60% 42% / 0.4);
     color: hsl(var(--foreground));
   }
 
   .filter-tab.active {
     background: var(--gradient-primary);
     border: none;
-    color: white;
-    box-shadow: 0 4px 12px hsl(263 70% 66% / 0.3);
+    color: hsl(160 20% 5%);
+    font-weight: 600;
+    box-shadow: 0 4px 12px hsl(152 60% 42% / 0.25);
   }
 
   /* Section Divider */
