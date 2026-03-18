@@ -124,7 +124,7 @@
 
   /* Navigation Glass */
   .nav-glass {
-    background: hsl(222 47% 7% / 0.85);
+    background: hsl(160 20% 5% / 0.88);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--glass-border);
