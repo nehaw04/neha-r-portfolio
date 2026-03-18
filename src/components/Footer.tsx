@@ -1,5 +1,6 @@
-import { Github, Linkedin, Mail, ArrowUp, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowUp, MapPin, Send } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/nehaw04', label: 'GitHub' },
@@ -23,36 +24,51 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contact" className="py-16 relative">
+    <footer id="contact" className="py-28 relative">
+      <div className="section-divider mb-28" />
+
       <div className="container mx-auto px-6">
-        <div className="glass-card rounded-3xl p-8 md:p-12">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="glass-card rounded-3xl p-8 md:p-14 relative overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-12 relative z-10">
             {/* Left Column */}
-            <div className="text-center md:text-left max-w-md">
-              <h3 className="text-2xl font-bold mb-4">
-                Let's Build Something <span className="gradient-text">Together</span>
+            <div className="text-center lg:text-left max-w-lg">
+              <p className="text-primary font-mono text-sm tracking-widest uppercase mb-3">
+                Get in touch
+              </p>
+              <h3 className="text-3xl md:text-4xl font-bold mb-5">
+                Let's Build Something{' '}
+                <span className="gradient-text">Together</span>
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-3">
-                I am currently open to internship or project opportunities in AI, 
+              <p className="text-muted-foreground leading-relaxed mb-5 text-lg">
+                I am currently open to internship or project opportunities in AI,
                 Machine Learning, or Salesforce Development.
               </p>
-              <div className="flex items-center gap-2 text-muted-foreground text-sm justify-center md:justify-start">
+              <div className="flex items-center gap-2 text-muted-foreground text-sm justify-center lg:justify-start mb-6">
                 <MapPin className="w-4 h-4 text-primary" />
                 <span>Bhopal / Kochi · Open to Remote</span>
               </div>
+              <a href="mailto:neha.2022@vitbhopal.ac.in">
+                <Button className="gradient-bg text-white px-8 py-6 rounded-xl text-base hover-lift glow hover:glow-strong transition-all duration-300 group">
+                  <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  Say Hello
+                </Button>
+              </a>
             </div>
 
             {/* Right Column */}
             <div className="text-center">
-              <h4 className="text-lg font-semibold mb-4">Let's Connect</h4>
-              <div className="flex gap-3">
+              <p className="text-sm text-muted-foreground mb-4 font-medium">Find me on</p>
+              <div className="flex gap-4">
                 {socialLinks.map((social) => (
                   <a
                     key={social.label}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="social-btn"
+                    className="social-btn w-14 h-14"
                     aria-label={social.label}
                   >
                     <social.icon className="w-5 h-5 text-muted-foreground" />
@@ -63,12 +79,12 @@ const Footer = () => {
           </div>
 
           {/* Divider */}
-          <div className="border-t border-primary/10 my-8" />
+          <div className="section-divider my-10 max-w-full" />
 
           {/* Copyright */}
-          <div className="text-center">
+          <div className="text-center relative z-10">
             <p className="text-muted-foreground text-sm">
-              © 2026 Neha R. Crafted with passion and code.
+              © 2026 Neha R. · Crafted with passion and code
             </p>
           </div>
         </div>
