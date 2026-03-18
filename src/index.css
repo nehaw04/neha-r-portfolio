@@ -169,7 +169,7 @@
   .social-btn:hover {
     @apply -translate-y-1;
     background: var(--gradient-primary);
-    box-shadow: 0 8px 20px hsl(263 70% 66% / 0.3);
+    box-shadow: 0 8px 20px hsl(152 60% 42% / 0.25);
   }
 
   .social-btn:hover svg {
