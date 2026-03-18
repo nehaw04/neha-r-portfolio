@@ -58,7 +58,7 @@ const HeroSection = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
         {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: 'linear-gradient(hsl(263 70% 66%) 1px, transparent 1px), linear-gradient(90deg, hsl(263 70% 66%) 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(hsl(152 60% 42%) 1px, transparent 1px), linear-gradient(90deg, hsl(152 60% 42%) 1px, transparent 1px)',
           backgroundSize: '60px 60px'
         }} />
       </div>
