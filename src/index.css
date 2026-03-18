@@ -180,7 +180,7 @@
   .filter-tab {
     @apply px-6 py-2 rounded-full text-sm font-medium transition-all duration-300;
     background: transparent;
-    border: 1px solid hsl(263 70% 66% / 0.2);
+    border: 1px solid hsl(152 60% 42% / 0.2);
     color: hsl(var(--muted-foreground));
   }
 
