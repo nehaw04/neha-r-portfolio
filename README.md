@@ -16,7 +16,7 @@
 
 [![Portfolio Live](https://img.shields.io/badge/🚀_PORTFOLIO-LIVE-E040FB?style=for-the-badge&labelColor=0C0C14)](https://neha-r-portfolio.lovable.app)
 [![Open to Work](https://img.shields.io/badge/⚡_STATUS-OPEN_TO_WORK-5FFFA0?style=for-the-badge&labelColor=0C0C14)](mailto:neha@email.com)
-[![IIT Graduate](https://img.shields.io/badge/🎓_IIT-GRADUATE-B97FFF?style=for-the-badge&labelColor=0C0C14)](#)
+[![VIT Pre-Final Year](https://img.shields.io/badge/🎓_VIT-PRE-FINAL-YEAR-B97FFF?style=for-the-badge&labelColor=0C0C14)](#)
 [![Competition](https://img.shields.io/badge/🏆_PORTFOLIO-COMPETITION-FF6EC7?style=for-the-badge&labelColor=0C0C14)](#)
 
 <br/>
@@ -48,8 +48,8 @@
 │                     NEHA_R · MODEL TRAINING DASHBOARD                   │
 ├──────────────┬──────────────┬──────────────┬──────────────┬─────────────┤
 │   L1 INPUT   │  L2 HIDDEN   │  L3 ATTENTION │  L4 OUTPUT   │   DEPLOY   │
-│              │              │               │              │             │
-│  IIT · CS    │  Full-Stack  │ Explainability│   Available  │  Hire Her  │
+│              │              │               │              │            │
+│  VIT · CS    │  Full-Stack  │ Explainability│   Available  │  Hire Her  │
 │  Graduate    │  ML Systems  │  SHAP · LIME  │  June 2025   │    Now     │
 └──────────────┴──────────────┴──────────────┴──────────────┴─────────────┘
         │              │               │              │
