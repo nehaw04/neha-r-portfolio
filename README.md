@@ -1,5 +1,5 @@
 <div align="center">
-
+<div align="center">
 <!-- HERO BANNER -->
 ```
 ███╗   ██╗███████╗██╗  ██╗ █████╗     ██████╗
@@ -9,6 +9,7 @@
 ██║ ╚████║███████╗██║  ██║██║  ██║    ██║  ██║
 ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝  ╚═╝
 ```
+</div>
 
 ### `model: neha_r_v3.0` · `status: deployed` · `accuracy: 92%`
 
@@ -258,7 +259,7 @@ portfolio_stack:
 ---
 
 ## ✨ Signature Animations
-
+<div align="center">
 ```
 ANIMATION REGISTRY
 ══════════════════════════════════════════════════════════
@@ -285,7 +286,7 @@ ANIMATION REGISTRY
                        Border color shifts to #E040FB
 ══════════════════════════════════════════════════════════
 ```
-
+</div>
 ---
 
 ## 🚀 Local Development
@@ -325,9 +326,9 @@ open http://localhost:8080
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/EMAIL-neha@email.com-E040FB?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0C0C14)](mailto:neha@email.com)
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-neha--r-B97FFF?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0C0C14)](https://linkedin.com/in/neha-r)
-[![GitHub](https://img.shields.io/badge/GITHUB-neha--r-5FFFA0?style=for-the-badge&logo=github&logoColor=white&labelColor=0C0C14)](https://github.com/neha-r)
+[![Email](https://img.shields.io/badge/EMAIL-nehar.xiaerror@email.com-E040FB?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0C0C14)](mailto:neha@email.com)
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-neha--r-B97FFF?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0C0C14)](https://linkedin.com/in/nehxr)
+[![GitHub](https://img.shields.io/badge/GITHUB-neha--r-5FFFA0?style=for-the-badge&logo=github&logoColor=white&labelColor=0C0C14)](https://github.com/nehaw04)
 
 </div>
 
