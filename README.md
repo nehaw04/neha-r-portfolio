@@ -1,73 +1,76 @@
-# Welcome to your Lovable project
+# Neha R — AI & ML Engineer Portfolio
 
-## Project info
+> A machine learning training dashboard themed portfolio built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**Live URL:** https://neha-r-portfolio.lovable.app
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## About
 
-**Use Lovable**
+Personal portfolio for **Neha R**, AI & ML Engineer — IIT Graduate.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Designed as a model training dashboard where the portfolio itself is framed as a deployable ML model. Features live animations, text scramble effects, animated loss curves, epoch logs, and scroll-triggered reveals across every section.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## Sections
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+| Section | Theme |
+|---|---|
+| Hero | Model registry entry with live training panel |
+| About | Neural network architecture layers (L1 → L4) |
+| Projects | Experiment runs with real metric bars |
+| Skills | Hyperparameter weights + environment config |
+| Contact | Deploy model panel |
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## Tech Stack
 
+- **Framework:** React + TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn-ui
+- **Build Tool:** Vite
+- **Fonts:** IBM Plex Mono + Outfit (Google Fonts)
+- **Animations:** CSS keyframes + Intersection Observer scroll reveals
+- **Canvas:** HTML5 Canvas particle network
+
+---
+
+## Color System
+
+| Token | Hex | Usage |
+|---|---|---|
+| Background | `#0C0C14` | Page base |
+| Electric Violet | `#E040FB` | Primary accent |
+| Soft Purple | `#B97FFF` | Secondary accent |
+| Mint Green | `#5FFFA0` | Live / success states |
+| Primary Text | `#E2E0FF` | Body copy |
+
+---
+
+## Local Development
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open `http://localhost:8080` in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) → Share → Publish.
 
-## What technologies are used for this project?
+For a custom domain: Project → Settings → Domains → Connect Domain.
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Contact
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+**Neha R** · AI & ML Engineer  
+neha@email.com · [LinkedIn](https://linkedin.com/in/neha-r) · [GitHub](https://github.com/neha-r)
