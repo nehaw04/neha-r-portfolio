@@ -1,5 +1,4 @@
 <div align="center">
-<div align="center">
 <!-- HERO BANNER -->
 ```
 ███╗   ██╗███████╗██╗  ██╗ █████╗     ██████╗
@@ -9,7 +8,7 @@
 ██║ ╚████║███████╗██║  ██║██║  ██║    ██║  ██║
 ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝  ╚═╝
 ```
-</div>
+
 
 ### `model: neha_r_v3.0` · `status: deployed` · `accuracy: 92%`
 
@@ -259,7 +258,7 @@ portfolio_stack:
 ---
 
 ## ✨ Signature Animations
-<div align="center">
+
 ```
 ANIMATION REGISTRY
 ══════════════════════════════════════════════════════════
@@ -286,7 +285,7 @@ ANIMATION REGISTRY
                        Border color shifts to #E040FB
 ══════════════════════════════════════════════════════════
 ```
-</div>
+
 ---
 
 ## 🚀 Local Development
