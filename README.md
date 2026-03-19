@@ -1,5 +1,6 @@
 <div align="center">
 <!-- HERO BANNER -->
+        
 ```
 ███╗   ██╗███████╗██╗  ██╗ █████╗     ██████╗
 ████╗  ██║██╔════╝██║  ██║██╔══██╗    ██╔══██╗
@@ -8,15 +9,13 @@
 ██║ ╚████║███████╗██║  ██║██║  ██║    ██║  ██║
 ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝  ╚═╝
 ```
-
-
 ### `model: neha_r_v3.0` · `status: deployed` · `accuracy: 92%`
 
 <br/>
 
 [![Portfolio Live](https://img.shields.io/badge/🚀_PORTFOLIO-LIVE-E040FB?style=for-the-badge&labelColor=0C0C14)](https://neha-r-portfolio.lovable.app)
-[![Open to Work](https://img.shields.io/badge/⚡_STATUS-OPEN_TO_WORK-5FFFA0?style=for-the-badge&labelColor=0C0C14)](mailto:neha@email.com)
-[![VIT Pre-Final Year](https://img.shields.io/badge/🎓_VIT-PRE-FINAL-YEAR-B97FFF?style=for-the-badge&labelColor=0C0C14)](#)
+[![Open to Work](https://img.shields.io/badge/⚡_STATUS-OPEN_TO_WORK-5FFFA0?style=for-the-badge&labelColor=0C0C14)](mailto:nehar.xiaeroor@email.com)
+[![VIT Pre-Final Year](https://img.shields.io/badge/🎓_VIT-PRE-FINAL-YEAR_B97FFF?style=for-the-badge&labelColor=0C0C14)](#)
 [![Competition](https://img.shields.io/badge/🏆_PORTFOLIO-COMPETITION-FF6EC7?style=for-the-badge&labelColor=0C0C14)](#)
 
 <br/>
