@@ -1,22 +1,22 @@
+import ParticleNetwork from '@/components/ParticleNetwork';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
+import MarqueeStrip from '@/components/MarqueeStrip';
 import AboutSection from '@/components/AboutSection';
-import SkillsSection from '@/components/SkillsSection';
 import ProjectsSection from '@/components/ProjectsSection';
-import EducationSection from '@/components/EducationSection';
-import SoftSkillsSection from '@/components/SoftSkillsSection';
+import SkillsSection from '@/components/SkillsSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen grid-bg" style={{ background: '#0C0C14' }}>
+      <ParticleNetwork />
       <Navigation />
       <HeroSection />
+      <MarqueeStrip />
       <AboutSection />
-      <SkillsSection />
       <ProjectsSection />
-      <EducationSection />
-      <SoftSkillsSection />
+      <SkillsSection />
       <Footer />
     </div>
   );

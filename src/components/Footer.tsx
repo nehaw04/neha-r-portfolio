@@ -1,105 +1,102 @@
-import { Github, Linkedin, Mail, ArrowUp, MapPin, Send } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
-const socialLinks = [
-  { icon: Github, href: 'https://github.com/nehaw04', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://www.linkedin.com/in/nehxr', label: 'LinkedIn' },
-  { icon: Mail, href: 'mailto:neha.2022@vitbhopal.ac.in', label: 'Email' },
+const contactLinks = [
+  { label: 'EMAIL', value: 'neha.2022@vitbhopal.ac.in', href: 'mailto:neha.2022@vitbhopal.ac.in' },
+  { label: 'LINKEDIN', value: 'linkedin.com/in/nehxr', href: 'https://www.linkedin.com/in/nehxr' },
+  { label: 'GITHUB', value: 'github.com/nehaw04', href: 'https://github.com/nehaw04' },
+  { label: 'RESUME', value: 'Download CV', href: '/Neha_R_Resume.pdf' },
 ];
 
 const Footer = () => {
-  const [showBackToTop, setShowBackToTop] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowBackToTop(window.scrollY > 300);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const ref = useScrollReveal();
 
   return (
-    <footer id="contact" className="py-28 relative">
-      <div className="section-divider mb-28" />
-
+    <footer id="contact" className="py-24 relative" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className="glass-card rounded-3xl p-8 md:p-14 relative overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="mb-12">
+          <span className="section-num">04</span>
+          <h2 className="mt-2" style={{ fontFamily: 'Outfit', fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 800, color: '#E2E0FF' }}>
+            Deploy Model
+          </h2>
+        </div>
 
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-12 relative z-10">
-            {/* Left Column */}
-            <div className="text-center lg:text-left max-w-lg">
-              <p className="text-primary font-mono text-sm tracking-widest uppercase mb-3">
-                Get in touch
-              </p>
-              <h3 className="text-3xl md:text-4xl font-bold mb-5">
-                Let's Build Something{' '}
-                <span className="gradient-text">Together</span>
+        <div
+          className="scroll-reveal rounded-[20px] overflow-hidden"
+          style={{ border: '1px solid var(--border-default)' }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            {/* Left */}
+            <div className="p-8 md:p-12" style={{ background: 'rgba(185,127,255,0.04)' }}>
+              <span className="text-[9px] font-mono" style={{ color: '#B97FFF' }}>
+                // ready to deploy
+              </span>
+
+              <h3 className="mt-4" style={{ fontFamily: 'Outfit', fontSize: 'clamp(32px, 4vw, 44px)', fontWeight: 900, color: '#E2E0FF', lineHeight: 1.15 }}>
+                Let's build <span className="gradient-text">something</span> intelligent.
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-5 text-lg">
-                I am currently open to internship or project opportunities in AI,
-                Machine Learning, or Salesforce Development.
-              </p>
-              <div className="flex items-center gap-2 text-muted-foreground text-sm justify-center lg:justify-start mb-6">
-                <MapPin className="w-4 h-4 text-primary" />
-                <span>Bhopal / Kochi · Open to Remote</span>
-              </div>
-              <a href="mailto:neha.2022@vitbhopal.ac.in">
-                <Button className="gradient-bg text-white px-8 py-6 rounded-xl text-base hover-lift glow hover:glow-strong transition-all duration-300 group">
-                  <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  Say Hello
-                </Button>
-              </a>
-            </div>
 
-            {/* Right Column */}
-            <div className="text-center">
-              <p className="text-sm text-muted-foreground mb-4 font-medium">Find me on</p>
-              <div className="flex gap-4">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-btn w-14 h-14"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="w-5 h-5 text-muted-foreground" />
-                  </a>
+              <p className="mt-4 text-[11px] font-mono leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+                Currently open to internship or project opportunities in AI, Machine Learning, or Salesforce Development.
+              </p>
+
+              <div className="flex gap-8 mt-8">
+                {[
+                  { label: 'Projects', val: '12', unit: '+' },
+                  { label: 'Experience', val: '3', unit: 'yr' },
+                  { label: 'Papers', val: '2', unit: '' },
+                ].map((s) => (
+                  <div key={s.label}>
+                    <div style={{ fontFamily: 'Outfit', fontSize: 28, fontWeight: 700 }}>
+                      <span className="text-white">{s.val}</span>
+                      <span style={{ color: '#E040FB' }}>{s.unit}</span>
+                    </div>
+                    <div className="text-[9px] font-mono uppercase mt-1" style={{ color: 'var(--text-very-muted)', letterSpacing: '1px' }}>
+                      {s.label}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
-          </div>
 
-          {/* Divider */}
-          <div className="section-divider my-10 max-w-full" />
-
-          {/* Copyright */}
-          <div className="text-center relative z-10">
-            <p className="text-muted-foreground text-sm">
-              © 2026 Neha R. · Crafted with passion and code
-            </p>
+            {/* Right */}
+            <div
+              className="p-8 md:p-12 flex flex-col justify-center"
+              style={{ borderLeft: '1px solid var(--border-default)' }}
+            >
+              {contactLinks.map((link, i) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target={link.label !== 'EMAIL' && link.label !== 'RESUME' ? '_blank' : undefined}
+                  rel="noopener noreferrer"
+                  className="scroll-reveal contact-link flex items-center justify-between py-4 px-4 -mx-4 rounded-lg group"
+                  style={{ transitionDelay: `${i * 100}ms`, borderBottom: i < contactLinks.length - 1 ? '1px solid rgba(120,100,255,0.08)' : 'none' }}
+                >
+                  <div>
+                    <div className="text-[9px] uppercase font-mono mb-1" style={{ letterSpacing: '1.5px', color: 'rgba(185,127,255,0.5)' }}>
+                      {link.label}
+                    </div>
+                    <div className="contact-value text-[12px] font-mono transition-colors" style={{ color: 'var(--text-muted)' }}>
+                      {link.value}
+                    </div>
+                  </div>
+                  <span className="contact-arrow text-[14px] transition-transform" style={{ color: 'var(--text-very-muted)' }}>
+                    ↗
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Back to Top */}
-      <button
-        onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 w-14 h-14 gradient-bg rounded-full flex items-center justify-center glow hover:glow-strong hover:scale-110 transition-all duration-300 z-50 ${
-          showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-        }`}
-        aria-label="Back to top"
-      >
-        <ArrowUp className="w-6 h-6 text-white" />
-      </button>
+        {/* Footer line */}
+        <div className="flex items-center justify-between mt-12 text-[10px] font-mono">
+          <span style={{ color: '#B97FFF' }}>neha_r · v3.0.0</span>
+          <span style={{ color: 'var(--text-whisper)' }}>
+            © 2025 · Model trained on 3 years of production ML · All rights reserved.
+          </span>
+        </div>
+      </div>
     </footer>
   );
 };

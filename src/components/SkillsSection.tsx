@@ -1,107 +1,111 @@
-import { useState } from 'react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
-type SkillCategory = 'all' | 'languages' | 'aiml' | 'platforms' | 'strengths';
-
-interface Skill {
-  name: string;
-  icon: string;
-  category: SkillCategory[];
-  level?: 'expert' | 'advanced' | 'intermediate';
-}
-
-const skills: Skill[] = [
-  { name: 'Python', icon: '🐍', category: ['all', 'languages'], level: 'expert' },
-  { name: 'R', icon: '📊', category: ['all', 'languages'], level: 'intermediate' },
-  { name: 'Apex', icon: '⚡', category: ['all', 'languages'], level: 'advanced' },
-  { name: 'Java', icon: '☕', category: ['all', 'languages'], level: 'intermediate' },
-  { name: 'Transformers', icon: '🤖', category: ['all', 'aiml'], level: 'advanced' },
-  { name: 'RAG', icon: '🔍', category: ['all', 'aiml'], level: 'advanced' },
-  { name: 'Agentic AI', icon: '🧠', category: ['all', 'aiml'], level: 'advanced' },
-  { name: 'OCR', icon: '📄', category: ['all', 'aiml'], level: 'expert' },
-  { name: 'Data Mining', icon: '⛏️', category: ['all', 'aiml'], level: 'intermediate' },
-  { name: 'PyTorch', icon: '🔥', category: ['all', 'aiml'], level: 'advanced' },
-  { name: 'Salesforce', icon: '☁️', category: ['all', 'platforms'], level: 'advanced' },
-  { name: 'AWS', icon: '🌐', category: ['all', 'platforms'], level: 'intermediate' },
-  { name: 'Git/GitHub', icon: '📦', category: ['all', 'platforms'], level: 'advanced' },
-  { name: 'Competitive Programming', icon: '🏆', category: ['all', 'strengths'] },
-  { name: 'Mathematical Aptitude', icon: '📐', category: ['all', 'strengths'] },
-  { name: 'Logic Building', icon: '🧩', category: ['all', 'strengths'] },
+const skillWeights = [
+  { label: 'deep_learning', value: 0.90 },
+  { label: 'nlp_llms', value: 0.88 },
+  { label: 'computer_vision', value: 0.82 },
+  { label: 'mlops_infra', value: 0.78 },
+  { label: 'data_engineering', value: 0.75 },
 ];
 
-const categories: { id: SkillCategory; label: string }[] = [
-  { id: 'all', label: 'All' },
-  { id: 'languages', label: 'Languages' },
-  { id: 'aiml', label: 'AI / ML' },
-  { id: 'platforms', label: 'Platforms' },
-  { id: 'strengths', label: 'Core Strengths' },
+const envPills = [
+  { name: 'PyTorch', color: '#EE4C2C' },
+  { name: 'TensorFlow', color: '#FF6F00' },
+  { name: 'LangChain', color: '#1C3C3C' },
+  { name: 'Hugging Face', color: '#FFD21E' },
+  { name: 'OpenCV', color: '#5C3EE8' },
+  { name: 'FastAPI', color: '#009688' },
+  { name: 'Docker', color: '#2496ED' },
+  { name: 'AWS', color: '#FF9900' },
+  { name: 'Salesforce', color: '#00A1E0' },
+  { name: 'Git', color: '#F05032' },
 ];
-
-const levelColors: Record<string, string> = {
-  expert: 'bg-accent/20 text-accent',
-  advanced: 'bg-primary/20 text-primary',
-  intermediate: 'bg-secondary/20 text-secondary',
-};
 
 const SkillsSection = () => {
-  const [activeCategory, setActiveCategory] = useState<SkillCategory>('all');
-
-  const filteredSkills = skills.filter((skill) =>
-    skill.category.includes(activeCategory)
-  );
+  const ref = useScrollReveal();
 
   return (
-    <section id="skills" className="py-28 relative">
-      <div className="section-divider mb-28" />
-
+    <section id="skills" className="py-24 relative" ref={ref}>
       <div className="container mx-auto px-6">
-        {/* Section Header */}
-        <div className="text-center mb-14">
-          <p className="text-primary font-mono text-sm tracking-widest uppercase mb-3 opacity-0 animate-fade-in" style={{ animationFillMode: 'forwards' }}>
-            What I work with
-          </p>
-          <h2 className="section-title opacity-0 animate-fade-in animation-delay-100" style={{ animationFillMode: 'forwards' }}>
-            Technical <span className="gradient-text">Arsenal</span>
+        <div className="mb-12">
+          <span className="section-num">03</span>
+          <h2 className="mt-2" style={{ fontFamily: 'Outfit', fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 800, color: '#E2E0FF' }}>
+            Hyperparameters
           </h2>
-          <p className="section-subtitle opacity-0 animate-fade-in animation-delay-200" style={{ animationFillMode: 'forwards' }}>
-            Technologies and tools I use to bring ideas to life
-          </p>
         </div>
 
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`filter-tab ${activeCategory === category.id ? 'active' : ''}`}
-            >
-              {category.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Skills Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
-          {filteredSkills.map((skill, index) => (
-            <div
-              key={skill.name}
-              className="skill-card group opacity-0 animate-fade-in"
-              style={{
-                animationDelay: `${index * 60}ms`,
-                animationFillMode: 'forwards',
-              }}
-            >
-              <span className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">{skill.icon}</span>
-              <span className="text-sm text-center text-foreground font-medium mb-1">
-                {skill.name}
-              </span>
-              {skill.level && (
-                <span className={`text-[10px] px-2 py-0.5 rounded-full mt-1 ${levelColors[skill.level]}`}>
-                  {skill.level}
-                </span>
-              )}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl">
+          {/* Left — skill_weights.json */}
+          <div className="scroll-reveal">
+            <div className="text-[10px] font-mono mb-4" style={{ color: 'var(--text-very-muted)' }}>
+              skill_weights.json
             </div>
-          ))}
+            <div className="space-y-5">
+              {skillWeights.map((skill, i) => (
+                <div
+                  key={skill.label}
+                  className="scroll-reveal"
+                  style={{ transitionDelay: `${i * 120}ms` }}
+                >
+                  <div className="flex justify-between text-[11px] font-mono mb-2">
+                    <span style={{ color: 'var(--text-muted)' }}>{skill.label}</span>
+                    <span style={{ color: '#E040FB' }}>{skill.value.toFixed(2)}</span>
+                  </div>
+                  <div className="h-[2px] rounded-full" style={{ background: 'rgba(120,100,255,0.1)' }}>
+                    <div
+                      className="h-full rounded-full transition-all duration-1000"
+                      style={{
+                        width: `${skill.value * 100}%`,
+                        background: 'linear-gradient(90deg, #7B5EA7, #E040FB)',
+                      }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right — environment.yml */}
+          <div className="scroll-reveal" style={{ transitionDelay: '200ms' }}>
+            <div className="text-[10px] font-mono mb-4" style={{ color: 'var(--text-very-muted)' }}>
+              environment.yml
+            </div>
+            <div
+              className="ml-card rounded-2xl p-5"
+            >
+              <div className="grid grid-cols-2 gap-3">
+                {envPills.map((pill, i) => (
+                  <div
+                    key={pill.name}
+                    className="scroll-reveal flex items-center gap-2.5 px-3 py-2 rounded-lg transition-all duration-200 cursor-default group"
+                    style={{
+                      transitionDelay: `${i * 55}ms`,
+                      border: '1px solid transparent',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.borderColor = 'var(--border-hover)';
+                      e.currentTarget.style.background = 'rgba(185,127,255,0.05)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = 'transparent';
+                      e.currentTarget.style.background = 'transparent';
+                    }}
+                  >
+                    <span
+                      className="w-2 h-2 rounded-full shrink-0"
+                      style={{ background: pill.color }}
+                    />
+                    <span
+                      className="text-[10px] font-mono group-hover:text-[#E040FB] transition-colors"
+                      style={{ color: 'var(--text-muted)' }}
+                    >
+                      {pill.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
