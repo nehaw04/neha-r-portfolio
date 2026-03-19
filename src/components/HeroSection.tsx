@@ -1,143 +1,237 @@
-import { ArrowDown, FileText, Briefcase, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { useState, useEffect } from 'react';
+import { useTextScramble } from '@/hooks/useTextScramble';
+import { useEffect, useState, useRef } from 'react';
 
-const roles = [
-  'Full-Stack AI Engineer',
-  'Privacy-First Developer',
-  'Agentic AI Builder',
-  'Salesforce Developer',
+const roles = ['AI ENGINEER', 'ML ENGINEER', 'NLP ENGINEER', 'MODEL BUILDER', 'SYSTEM THINKER'];
+
+const metrics = [
+  { label: 'Accuracy', value: '94.2', unit: '%', delta: '↑ best in class' },
+  { label: 'Projects', value: '12', unit: '+', delta: '↑ shipped to prod' },
+  { label: 'Experience', value: '3', unit: 'yr', delta: '↑ production ML' },
+  { label: 'Papers', value: '2', unit: '+', delta: '↑ published' },
 ];
 
-const stats = [
-  { label: 'Projects Built', value: '5+' },
-  { label: 'Tech Stack', value: '15+' },
-  { label: 'AI Models', value: '3+' },
+const epochLog = [
+  { epoch: 1, loss: '2.847', acc: '52.1%', lr: '1e-3', time: '4m 12s' },
+  { epoch: 5, loss: '1.203', acc: '71.8%', lr: '5e-4', time: '3m 58s' },
+  { epoch: 12, loss: '0.541', acc: '84.2%', lr: '1e-4', time: '3m 44s' },
+  { epoch: 20, loss: '0.182', acc: '91.7%', lr: '5e-5', time: '3m 31s' },
+  { epoch: 25, loss: '0.082', acc: '92.4%', lr: '1e-5', time: '3m 28s' },
 ];
 
 const HeroSection = () => {
-  const [currentRole, setCurrentRole] = useState(0);
-  const [displayText, setDisplayText] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
+  const scrambledRole = useTextScramble(roles, 2400);
+  const [visibleLines, setVisibleLines] = useState(0);
+  const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
-    const role = roles[currentRole];
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        if (displayText.length < role.length) {
-          setDisplayText(role.slice(0, displayText.length + 1));
-        } else {
-          setTimeout(() => setIsDeleting(true), 2000);
-        }
-      } else {
-        if (displayText.length > 0) {
-          setDisplayText(role.slice(0, displayText.length - 1));
-        } else {
-          setIsDeleting(false);
-          setCurrentRole((prev) => (prev + 1) % roles.length);
-        }
-      }
-    }, isDeleting ? 40 : 80);
-
-    return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentRole]);
-
-  const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-  };
+    const timer = setInterval(() => {
+      setVisibleLines((prev) => (prev < epochLog.length ? prev + 1 : prev));
+    }, 600);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
-    >
-      {/* Background Effects */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-secondary/15 rounded-full blur-3xl animate-float animation-delay-500" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: 'linear-gradient(hsl(152 60% 42%) 1px, transparent 1px), linear-gradient(90deg, hsl(152 60% 42%) 1px, transparent 1px)',
-          backgroundSize: '60px 60px'
-        }} />
-      </div>
+    <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-[58px]">
+      <div className="container mx-auto px-6 relative z-10 py-16">
+        {/* Breadcrumb */}
+        <div
+          className="mb-8 text-[10px] uppercase font-mono"
+          style={{ letterSpacing: '1.5px', color: 'var(--text-very-muted)' }}
+        >
+          models / neha_r / v3.0
+        </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-          {/* Status Badge */}
-          <div className="mb-8 opacity-0 animate-fade-in" style={{ animationFillMode: 'forwards' }}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 glass-card rounded-full text-sm">
-              <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span className="text-accent font-medium">Available for Opportunities</span>
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+          {/* Left Column */}
+          <div className="lg:col-span-3">
+            {/* Name */}
+            <h1 style={{ fontFamily: 'Outfit', fontSize: 'clamp(48px, 6vw, 72px)', fontWeight: 900, lineHeight: 1.05 }}>
+              <span className="block text-white">NEHA R.</span>
+              <span className="block gradient-text">{scrambledRole}</span>
+            </h1>
+
+            {/* Role line */}
+            <p
+              className="mt-4 mb-8"
+              style={{
+                fontSize: 11,
+                letterSpacing: '3px',
+                textTransform: 'uppercase',
+                color: 'var(--text-very-muted)',
+              }}
+            >
+              Machine Learning · NLP · Computer Vision · MLOps
+            </p>
+
+            {/* Metric Cards */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+              {metrics.map((m) => (
+                <div
+                  key={m.label}
+                  className="ml-card rounded-xl p-4 group cursor-default"
+                  style={{ border: '1px solid var(--border-default)' }}
+                >
+                  <div
+                    className="text-[9px] uppercase mb-2 font-mono"
+                    style={{ color: 'var(--text-very-muted)', letterSpacing: '1px' }}
+                  >
+                    {m.label}
+                  </div>
+                  <div style={{ fontFamily: 'Outfit', fontWeight: 700, fontSize: 28 }}>
+                    <span className="text-white">{m.value}</span>
+                    <span style={{ color: '#E040FB' }}>{m.unit}</span>
+                  </div>
+                  <div className="text-[10px] mt-1 font-mono" style={{ color: '#5FFFA0' }}>
+                    {m.delta}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Description */}
+            <p
+              className="mb-8 max-w-xl"
+              style={{
+                fontSize: 13,
+                lineHeight: 1.95,
+                color: 'var(--text-muted)',
+              }}
+            >
+              Pre-final year Integrated M.Tech student at <b style={{ color: '#E040FB' }}>VIT Bhopal</b> specializing in AIML.
+              I build <i style={{ color: '#B97FFF' }}>privacy-first AI systems</i>, agentic workflows, and scalable enterprise solutions
+              with a focus on <b style={{ color: '#E040FB' }}>real-world deployment</b>.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex gap-4">
+              <button
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-6 py-3 rounded-[9px] text-white text-[11px] font-semibold uppercase tracking-wider transition-transform hover:scale-[1.04]"
+                style={{ background: 'linear-gradient(135deg, #7B5EA7, #E040FB)' }}
+              >
+                View Experiments →
+              </button>
+              <a
+                href="/Neha_R_Resume.pdf"
+                download
+                className="px-6 py-3 rounded-[9px] text-[11px] font-semibold uppercase tracking-wider transition-all hover:text-[#E040FB] hover:border-[#B97FFF]"
+                style={{
+                  border: '1px solid rgba(120,100,255,0.25)',
+                  color: 'var(--text-muted)',
+                }}
+              >
+                Download CV
+              </a>
             </div>
           </div>
 
-          {/* Greeting */}
-          <p className="text-muted-foreground text-lg mb-3 opacity-0 animate-fade-in animation-delay-100" style={{ animationFillMode: 'forwards' }}>
-            Hi there, I'm
-          </p>
-
-          {/* Name */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 opacity-0 animate-scale-in animation-delay-200" style={{ animationFillMode: 'forwards' }}>
-            <span className="gradient-text">Neha R.</span>
-          </h1>
-
-          {/* Typing Role */}
-          <div className="h-10 md:h-12 flex items-center justify-center mb-6 opacity-0 animate-fade-in animation-delay-300" style={{ animationFillMode: 'forwards' }}>
-            <span className="text-xl md:text-2xl font-medium text-foreground font-mono">
-              {displayText}
-              <span className="inline-block w-0.5 h-6 md:h-7 bg-primary ml-1 animate-pulse" />
-            </span>
-          </div>
-
-          {/* Tagline */}
-          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mb-10 leading-relaxed opacity-0 animate-fade-in animation-delay-400" style={{ animationFillMode: 'forwards' }}>
-            Pre-final year Integrated M.Tech student at VIT Bhopal specializing in AIML.
-            I build privacy-first AI systems, agentic workflows, and scalable enterprise solutions.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-16 opacity-0 animate-fade-in animation-delay-500" style={{ animationFillMode: 'forwards' }}>
-            <Button
-              onClick={scrollToProjects}
-              className="gradient-bg text-white px-8 py-6 text-lg rounded-xl hover-lift glow hover:glow-strong transition-all duration-300 group"
+          {/* Right Column — Training Panel */}
+          <div className="lg:col-span-2">
+            <div
+              className="rounded-2xl overflow-hidden"
+              style={{ border: '1px solid rgba(120,100,255,0.15)' }}
             >
-              <Briefcase className="mr-2 h-5 w-5" />
-              View Projects
-              <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <a href="/Neha_R_Resume.pdf" download>
-              <Button
-                variant="outline"
-                className="border-2 border-primary/50 text-primary hover:bg-primary hover:text-white px-8 py-6 text-lg rounded-xl transition-all duration-300 w-full"
+              {/* Header */}
+              <div
+                className="flex items-center justify-between px-5 py-3"
+                style={{ borderBottom: '1px solid rgba(120,100,255,0.1)' }}
               >
-                <FileText className="mr-2 h-5 w-5" />
-                Download Resume
-              </Button>
-            </a>
-          </div>
-
-          {/* Stats Row */}
-          <div className="grid grid-cols-3 gap-8 opacity-0 animate-fade-in-up animation-delay-600" style={{ animationFillMode: 'forwards' }}>
-            {stats.map((stat, i) => (
-              <div key={stat.label} className="stat-card">
-                <div className="stat-number gradient-text">{stat.value}</div>
-                <div className="text-xs md:text-sm text-muted-foreground mt-1">{stat.label}</div>
+                <span className="text-[11px] font-mono" style={{ color: 'var(--text-muted)' }}>
+                  training_run · neha_r_v3
+                </span>
+                <div className="flex items-center gap-2">
+                  <span className="relative w-2 h-2">
+                    <span className="absolute inset-0 rounded-full bg-[#5FFFA0] mint-pulse" />
+                    <span className="relative block w-2 h-2 rounded-full bg-[#5FFFA0]" />
+                  </span>
+                  <span className="text-[9px] uppercase font-mono font-semibold" style={{ color: '#5FFFA0', letterSpacing: '1px' }}>
+                    LIVE
+                  </span>
+                </div>
               </div>
-            ))}
+
+              {/* Loss Curve */}
+              <div className="px-5 py-4">
+                <svg ref={svgRef} viewBox="0 0 300 120" className="w-full h-auto">
+                  {/* Grid lines */}
+                  {[0, 30, 60, 90].map((y) => (
+                    <line key={y} x1="0" y1={y} x2="300" y2={y} stroke="rgba(120,100,255,0.06)" strokeWidth="0.5" />
+                  ))}
+                  {/* Loss curve area */}
+                  <path
+                    d="M0,15 C30,18 60,30 100,55 C140,72 200,95 280,105 L280,120 L0,120 Z"
+                    fill="url(#lossGrad)"
+                    opacity="0.15"
+                  />
+                  {/* Loss curve */}
+                  <path
+                    d="M0,15 C30,18 60,30 100,55 C140,72 200,95 280,105"
+                    fill="none"
+                    stroke="#E040FB"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                  {/* Accuracy curve */}
+                  <path
+                    d="M0,100 C30,95 60,85 100,70 C140,55 200,30 280,18"
+                    fill="none"
+                    stroke="#5FFFA0"
+                    strokeWidth="1.5"
+                    strokeDasharray="4,3"
+                    strokeLinecap="round"
+                  />
+                  {/* Live dots */}
+                  <circle cx="280" cy="105" r="3" fill="#E040FB">
+                    <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="280" cy="18" r="3" fill="#5FFFA0">
+                    <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+                  </circle>
+                  {/* Gradient def */}
+                  <defs>
+                    <linearGradient id="lossGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor="#E040FB" stopOpacity="0.4" />
+                      <stop offset="100%" stopColor="#E040FB" stopOpacity="0" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div className="flex gap-6 mt-2">
+                  <div className="flex items-center gap-2 text-[9px] font-mono">
+                    <span className="w-3 h-[2px] bg-[#E040FB] rounded" />
+                    <span style={{ color: 'var(--text-very-muted)' }}>loss</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-[9px] font-mono">
+                    <span className="w-3 h-[2px] bg-[#5FFFA0] rounded" style={{ opacity: 0.7 }} />
+                    <span style={{ color: 'var(--text-very-muted)' }}>accuracy</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Epoch Log */}
+              <div
+                className="px-5 py-3 space-y-1.5 font-mono text-[10px]"
+                style={{ borderTop: '1px solid rgba(120,100,255,0.08)', maxHeight: 150, overflow: 'hidden' }}
+              >
+                {epochLog.slice(0, visibleLines).map((line, i) => (
+                  <div
+                    key={line.epoch}
+                    className="epoch-line flex gap-4"
+                    style={{ animationDelay: `${i * 150}ms` }}
+                  >
+                    <span style={{ color: 'var(--text-very-muted)' }}>Epoch {String(line.epoch).padStart(2, '0')}</span>
+                    <span>loss: <span style={{ color: '#E040FB' }}>{line.loss}</span></span>
+                    <span>acc: <span style={{ color: '#5FFFA0' }}>{line.acc}</span></span>
+                    <span className="hidden sm:inline">lr: <span style={{ color: '#B97FFF' }}>{line.lr}</span></span>
+                    <span className="hidden sm:inline" style={{ color: 'var(--text-very-muted)' }}>{line.time}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <button
-        onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors animate-bounce"
-        aria-label="Scroll down"
-      >
-        <ArrowDown size={28} />
-      </button>
     </section>
   );
 };

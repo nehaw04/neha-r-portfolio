@@ -1,121 +1,107 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
+  { name: 'Architecture', href: '#about' },
+  { name: 'Experiments', href: '#projects' },
+  { name: 'Metrics', href: '#skills' },
   { name: 'Contact', href: '#contact' },
 ];
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-      
-      // Update active section based on scroll position
-      const sections = navLinks.map(link => link.href.slice(1));
-      for (const section of sections.reverse()) {
-        const element = document.getElementById(section);
-        if (element && window.scrollY >= element.offsetTop - 100) {
+      const sections = navLinks.map(l => l.href.slice(1));
+      for (const section of [...sections].reverse()) {
+        const el = document.getElementById(section);
+        if (el && window.scrollY >= el.offsetTop - 120) {
           setActiveSection(section);
           break;
         }
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (href: string) => {
-    setIsOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleClick = (href: string) => {
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'nav-glass py-4' : 'py-6'
+        scrolled ? 'nav-glass' : ''
       }`}
+      style={{ height: 58 }}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className="container mx-auto px-6 h-full flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="text-2xl font-bold gradient-text">
-          NR.
-        </a>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <button
-              key={link.name}
-              onClick={() => handleNavClick(link.href)}
-              className={`relative text-sm font-medium transition-colors duration-300 ${
-                activeSection === link.href.slice(1)
-                  ? 'text-primary'
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              {link.name}
-              {activeSection === link.href.slice(1) && (
-                <span className="absolute -bottom-1 left-0 right-0 h-0.5 gradient-bg rounded-full" />
-              )}
-            </button>
-          ))}
+        <div className="flex items-center gap-3">
+          <div
+            className="w-7 h-7 rounded-md flex items-center justify-center text-[10px] font-bold text-white"
+            style={{ background: 'linear-gradient(135deg, #7B5EA7, #E040FB)' }}
+          >
+            NR
+          </div>
+          <span className="text-xs font-mono" style={{ color: 'var(--text-muted)' }}>
+            neha_r.model
+          </span>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-foreground"
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+        {/* Center Nav */}
+        <div className="hidden md:flex items-center gap-1">
+          {navLinks.map((link) => {
+            const isActive = activeSection === link.href.slice(1);
+            return (
+              <button
+                key={link.name}
+                onClick={() => handleClick(link.href)}
+                className="px-4 py-1.5 rounded-md transition-all duration-200"
+                style={{
+                  fontSize: 10,
+                  letterSpacing: '1.5px',
+                  textTransform: 'uppercase' as const,
+                  color: isActive ? '#E040FB' : 'rgba(226,224,255,0.3)',
+                  background: isActive ? 'rgba(224,64,251,0.08)' : 'transparent',
+                  border: isActive ? '1px solid rgba(224,64,251,0.3)' : '1px solid transparent',
+                }}
+              >
+                {link.name}
+              </button>
+            );
+          })}
+        </div>
 
-      {/* Mobile Menu */}
-      <div
-        className={`md:hidden fixed inset-y-0 right-0 w-64 nav-glass transform transition-transform duration-300 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
-        <div className="flex flex-col items-center justify-center h-full gap-8">
-          {navLinks.map((link, index) => (
-            <button
-              key={link.name}
-              onClick={() => handleNavClick(link.href)}
-              className={`text-lg font-medium transition-all duration-300 opacity-0 ${
-                isOpen ? 'animate-fade-in' : ''
-              } ${
-                activeSection === link.href.slice(1)
-                  ? 'text-primary'
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {link.name}
-            </button>
-          ))}
+        {/* Right */}
+        <div className="flex items-center gap-4">
+          <div
+            className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full text-[10px] uppercase"
+            style={{
+              letterSpacing: '1px',
+              border: '1px solid rgba(95,255,160,0.2)',
+              color: '#5FFFA0',
+            }}
+          >
+            <span className="relative w-2 h-2">
+              <span className="absolute inset-0 rounded-full bg-[#5FFFA0] mint-pulse" />
+              <span className="relative block w-2 h-2 rounded-full bg-[#5FFFA0]" />
+            </span>
+            model: available
+          </div>
+          <a
+            href="#contact"
+            onClick={(e) => { e.preventDefault(); handleClick('#contact'); }}
+            className="px-4 py-1.5 rounded-lg text-white text-[11px] font-semibold uppercase tracking-wider transition-transform hover:scale-[1.04]"
+            style={{ background: 'linear-gradient(135deg, #7B5EA7, #E040FB)' }}
+          >
+            Deploy Me →
+          </a>
         </div>
       </div>
-
-      {/* Overlay */}
-      {isOpen && (
-        <div
-          className="md:hidden fixed inset-0 bg-background/50 backdrop-blur-sm -z-10"
-          onClick={() => setIsOpen(false)}
-        />
-      )}
     </nav>
   );
 };

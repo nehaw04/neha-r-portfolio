@@ -1,133 +1,153 @@
-import { GraduationCap, Building2, ShieldCheck, Cpu, ArrowRight } from 'lucide-react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { useTextScramble } from '@/hooks/useTextScramble';
 
-const highlights = [
+const layers = [
   {
-    icon: GraduationCap,
-    title: 'VIT Bhopal University',
-    detail: 'Integrated M.Tech in AI & ML (Class of 2027)',
-    color: 'from-primary/20 to-secondary/20',
+    index: 'L1',
+    type: 'INPUT',
+    tag: 'Foundation',
+    scrambleTexts: ["init(graduate='VIT', major='CS')", "load(weights='academic')"],
+    title: 'Academic Foundation',
+    description: 'Integrated M.Tech in Computer Science at VIT Bhopal, specializing in AI & ML. 3 years of deep immersion in machine learning theory and application.',
+    chips: ['params: 3yr', 'batch: CS+AI', 'dtype: M.Tech'],
   },
   {
-    icon: Building2,
-    title: 'Salesforce Intern @ Impaqtive',
-    detail: 'Apex, CRM customization & workflow optimization',
-    color: 'from-secondary/20 to-primary/20',
+    index: 'L2',
+    type: 'HIDDEN',
+    tag: 'Engineering',
+    scrambleTexts: ['pipeline.run(end_to_end=True)', 'build(stack=full)'],
+    title: 'Full-Stack ML Engineering',
+    description: 'End-to-end pipeline architect — from data ingestion and model training to deployment. Salesforce internship at Impaqtive for enterprise-grade CRM solutions.',
+    chips: ['params: E2E', 'batch: prod', 'dtype: full-stack'],
   },
   {
-    icon: ShieldCheck,
-    title: 'Privacy-First AI',
-    detail: 'Building offline, local AI systems that protect user data',
-    color: 'from-accent/20 to-primary/20',
+    index: 'L3',
+    type: 'ATTN',
+    tag: 'Explainability',
+    scrambleTexts: ['explainability.shap(visualize=True)', 'attention.focus(privacy=True)'],
+    title: 'Privacy-First & Explainable AI',
+    description: 'Building offline, local AI systems that protect user data. SHAP-based model explanations ensure transparency and trust in every prediction.',
+    chips: ['params: SHAP', 'batch: offline', 'dtype: private'],
   },
   {
-    icon: Cpu,
-    title: 'Agentic AI & RAG',
-    detail: 'Multi-agent systems with retrieval-augmented generation',
-    color: 'from-primary/20 to-accent/20',
+    index: 'L4',
+    type: 'OUTPUT',
+    tag: 'Status',
+    scrambleTexts: ['neha.available() → True', '# hire her now'],
+    title: 'Ready for Deployment',
+    description: 'Currently seeking opportunities in AI/ML engineering, NLP, and intelligent automation. Open to internships, research, and full-time roles.',
+    chips: ['status: ready', 'mode: deploy', 'output: hire'],
   },
 ];
 
-const AboutSection = () => {
-  return (
-    <section id="about" className="py-28 relative">
-      {/* Section Divider */}
-      <div className="section-divider mb-28" />
+const LayerCard = ({ layer, index }: { layer: typeof layers[0]; index: number }) => {
+  const scrambled = useTextScramble(layer.scrambleTexts, 3000);
 
+  return (
+    <div
+      className="scroll-reveal ml-card rounded-2xl overflow-hidden layer-border-anim flex"
+      style={{ transitionDelay: `${index * 130}ms` }}
+    >
+      {/* Left index column */}
+      <div
+        className="flex flex-col items-center justify-center px-4 py-6 shrink-0"
+        style={{
+          width: 58,
+          background: 'rgba(120,100,255,0.05)',
+          borderRight: '1px solid var(--border-default)',
+        }}
+      >
+        <span style={{ fontFamily: 'Outfit', fontSize: 18, color: 'rgba(185,127,255,0.4)' }}>
+          {layer.index}
+        </span>
+        <span
+          className="font-mono mt-2"
+          style={{
+            fontSize: 8,
+            writingMode: 'vertical-lr',
+            letterSpacing: '2px',
+            color: 'var(--text-very-muted)',
+          }}
+        >
+          {layer.type}
+        </span>
+      </div>
+
+      {/* Right content */}
+      <div className="flex-1 p-6">
+        <span
+          className="inline-block px-2 py-0.5 rounded text-[9px] uppercase font-mono mb-2"
+          style={{
+            letterSpacing: '1px',
+            background: 'rgba(224,64,251,0.1)',
+            color: '#E040FB',
+          }}
+        >
+          {layer.tag}
+        </span>
+
+        <div
+          className="font-mono text-[11px] mb-3 h-5 overflow-hidden"
+          style={{ color: '#B97FFF' }}
+        >
+          {scrambled}
+        </div>
+
+        <h3 style={{ fontFamily: 'Outfit', fontSize: 18, fontWeight: 700, color: '#E2E0FF' }}>
+          {layer.title}
+        </h3>
+
+        <p className="mt-2 text-[12px] leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+          {layer.description}
+        </p>
+
+        <div className="flex flex-wrap gap-2 mt-4">
+          {layer.chips.map((chip) => (
+            <span
+              key={chip}
+              className="text-[9px] font-mono px-2 py-1 rounded"
+              style={{
+                background: 'rgba(120,100,255,0.07)',
+                color: 'var(--text-very-muted)',
+              }}
+            >
+              {chip}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AboutSection = () => {
+  const ref = useScrollReveal();
+
+  return (
+    <section id="about" className="py-24 relative" ref={ref}>
       <div className="container mx-auto px-6">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-primary font-mono text-sm tracking-widest uppercase mb-3 opacity-0 animate-fade-in" style={{ animationFillMode: 'forwards' }}>
-            Get to know me
-          </p>
-          <h2 className="section-title opacity-0 animate-fade-in animation-delay-100" style={{ animationFillMode: 'forwards' }}>
-            About <span className="gradient-text">Me</span>
+        <div className="mb-12">
+          <span className="section-num">01</span>
+          <h2 className="mt-2" style={{ fontFamily: 'Outfit', fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 800, color: '#E2E0FF' }}>
+            Model Architecture
           </h2>
         </div>
 
-        {/* Narrative */}
-        <div className="max-w-3xl mx-auto mb-20 opacity-0 animate-fade-in-up animation-delay-200" style={{ animationFillMode: 'forwards' }}>
-          <div className="glass-card rounded-3xl p-8 md:p-10 relative">
-            {/* Decorative quote mark */}
-            <span className="absolute top-4 left-6 text-6xl text-primary/10 font-serif leading-none select-none">"</span>
-            <p className="text-muted-foreground leading-relaxed text-lg mb-4 relative z-10">
-              I am an Integrated M.Tech student in Artificial Intelligence and Machine Learning at{' '}
-              <span className="text-foreground font-semibold">VIT Bhopal University</span> (Class of 2027).
-              My technical journey is driven by a fascination with how machines learn and a commitment to{' '}
-              <span className="text-primary font-semibold">Data Privacy</span>.
-            </p>
-            <p className="text-muted-foreground leading-relaxed text-lg relative z-10">
-              While many are moving toward cloud-based AI, I focus on building{' '}
-              <span className="text-foreground font-semibold">offline, local AI systems</span> that protect user data.
-              My experience spans from deep-learning projects like AutoForm-AI to enterprise-grade development
-              during my Salesforce internship at Impaqtive. I thrive at the intersection of{' '}
-              <span className="text-primary font-semibold">logical problem-solving</span> and{' '}
-              <span className="text-primary font-semibold">creative software architecture</span>.
-            </p>
-          </div>
-        </div>
+        {/* Vertical connector line + cards */}
+        <div className="relative max-w-3xl">
+          {/* Connector line */}
+          <div
+            className="absolute left-[29px] top-0 bottom-0 w-px hidden md:block"
+            style={{
+              background: 'linear-gradient(180deg, #B97FFF, #E040FB, #5FFFA0)',
+              opacity: 0.3,
+            }}
+          />
 
-        {/* Highlight Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-20">
-          {highlights.map((item, index) => (
-            <div
-              key={item.title}
-              className="glass-card rounded-3xl p-8 hover-lift transition-all duration-300 group opacity-0 animate-fade-in-up"
-              style={{ animationDelay: `${index * 100 + 300}ms`, animationFillMode: 'forwards' }}
-            >
-              <div className="flex items-start gap-5">
-                <div className={`icon-container w-14 h-14 shrink-0 bg-gradient-to-br ${item.color} group-hover:icon-container-hover transition-all duration-300`}>
-                  <item.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1 text-foreground group-hover:text-primary transition-colors">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.detail}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Experience Block */}
-        <div className="max-w-3xl mx-auto opacity-0 animate-fade-in-up" style={{ animationDelay: '700ms', animationFillMode: 'forwards' }}>
-          <div className="flex items-center gap-3 mb-8">
-            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/20" />
-            <h3 className="text-2xl md:text-3xl font-bold whitespace-nowrap">
-              Professional <span className="gradient-text">Experience</span>
-            </h3>
-            <div className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/20" />
-          </div>
-
-          <div className="glass-card rounded-3xl p-8 md:p-10 group hover-lift">
-            <div className="flex items-start gap-5">
-              <div className="icon-container w-14 h-14 shrink-0 group-hover:icon-container-hover transition-all duration-300">
-                <Building2 className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300" />
-              </div>
-              <div className="flex-1">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-4">
-                  <div>
-                    <h4 className="text-lg font-semibold text-foreground">Salesforce Development Intern</h4>
-                    <p className="text-primary text-sm font-medium">Impaqtive</p>
-                  </div>
-                  <span className="text-muted-foreground text-xs font-mono bg-primary/5 px-3 py-1 rounded-full w-fit">
-                    Oct 2025 – Dec 2025
-                  </span>
-                </div>
-                <ul className="space-y-3 text-muted-foreground text-sm leading-relaxed">
-                  <li className="flex items-start gap-3">
-                    <ArrowRight className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    Collaborated with the consulting team to design and implement custom Salesforce solutions.
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <ArrowRight className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    Gained hands-on experience with Apex programming and CRM customization.
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <ArrowRight className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    Assisted in optimizing business workflows to improve client operational efficiency.
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div className="space-y-6">
+            {layers.map((layer, i) => (
+              <LayerCard key={layer.index} layer={layer} index={i} />
+            ))}
           </div>
         </div>
       </div>
