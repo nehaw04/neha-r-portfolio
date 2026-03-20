@@ -59,7 +59,7 @@ const HeroSection = () => {
                 color: 'var(--text-very-muted)',
               }}
             >
-              Machine Learning · NLP · Computer Vision · MLOps
+              AI & ML Engineer · Full-Stack Developer
             </p>
 
             {/* Metric Cards */}
