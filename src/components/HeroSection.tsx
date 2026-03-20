@@ -4,10 +4,9 @@ import { useEffect, useState, useRef } from 'react';
 const roles = ['AI ENGINEER', 'ML ENGINEER', 'NLP ENGINEER', 'MODEL BUILDER', 'SYSTEM THINKER'];
 
 const metrics = [
-  { label: 'Accuracy', value: '94.2', unit: '%', delta: '↑ best in class' },
-  { label: 'Projects', value: '12', unit: '+', delta: '↑ shipped to prod' },
-  { label: 'Experience', value: '3', unit: 'yr', delta: '↑ production ML' },
-  { label: 'Papers', value: '2', unit: '+', delta: '↑ published' },
+  { label: 'Grad Year', value: '2027', unit: '', delta: '↑ VIT Bhopal' },
+  { label: 'AI/ML Projects', value: '10', unit: '+', delta: '↑ shipped & building' },
+  { label: 'Aptitude Solved', value: '300', unit: '+', delta: '↑ logic & quant' },
 ];
 
 const epochLog = [
