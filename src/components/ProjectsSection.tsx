@@ -6,8 +6,8 @@ const experiments = [
     year: '2024',
     badge: 'NLP',
     badgeColor: 'rgba(224,64,251,0.8)',
-    title: 'AutoForm AI',
-    desc: 'Offline OCR system using Transformer models — 100% data privacy for sensitive document processing.',
+    title: 'AutoForm-AI',
+    desc: 'Offline ID card scanner and form-filler browser extension using OCR and local LLMs for 100% data privacy.',
     metrics: [
       { label: 'Accuracy', value: 94, display: '94.2%' },
       { label: 'Precision', value: 91, display: '91.8%' },
@@ -22,7 +22,7 @@ const experiments = [
     badge: 'ML',
     badgeColor: 'rgba(255,180,50,0.8)',
     title: 'Loan Buddy',
-    desc: 'Autonomous AI system handling full loan lifecycle — data extraction to risk assessment in BFSI.',
+    desc: 'Multi-agent AI framework automating the loan lifecycle from lead to sanction, reducing manual processing by 40%.',
     metrics: [
       { label: 'F1 Score', value: 89, display: '0.893' },
       { label: 'AUC-ROC', value: 96, display: '0.961' },
@@ -36,15 +36,15 @@ const experiments = [
     year: '2024',
     badge: 'LLM',
     badgeColor: 'rgba(185,127,255,0.8)',
-    title: 'Agentic AI eBook Assistant',
-    desc: 'Context-aware AI assistant using Retrieval-Augmented Generation on custom datasets.',
+    title: 'HereForYou',
+    desc: 'AI-assisted mental health triage system built during a hackathon to provide crisis detection and human hand-off.',
     metrics: [
       { label: 'Accuracy', value: 88, display: '88.4%' },
       { label: 'F1 Score', value: 86, display: '0.862' },
       { label: 'Latency', value: 42, display: '42ms' },
     ],
-    tags: ['RAG', 'LLMs', 'Python', 'FAISS'],
-    github: 'https://github.com/nehaw04/Agentic-AI-eBook-Assistant',
+    tags: ['RAG', 'LLMs', 'Python', 'NLP'],
+    github: 'https://github.com/nehaw04',
   },
   {
     id: 'EXP-004',
@@ -52,7 +52,7 @@ const experiments = [
     badge: 'CV',
     badgeColor: 'rgba(95,255,160,0.8)',
     title: 'Faculty Availability Indicator',
-    desc: 'Real-time object detection and classification pipeline using YOLOv8 for industrial QA.',
+    desc: 'Real-time detection and classification system using YOLOv8 for campus faculty tracking.',
     metrics: [
       { label: 'mAP@50', value: 91, display: '91.3%' },
       { label: 'FPS', value: 78, display: '78' },

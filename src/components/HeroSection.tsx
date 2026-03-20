@@ -96,9 +96,9 @@ const HeroSection = () => {
                 color: 'var(--text-muted)',
               }}
             >
-              Pre-final year Integrated M.Tech student at <b style={{ color: '#E040FB' }}>VIT Bhopal</b> specializing in AIML.
-              I build <i style={{ color: '#B97FFF' }}>privacy-first AI systems</i>, agentic workflows, and scalable enterprise solutions
-              with a focus on <b style={{ color: '#E040FB' }}>real-world deployment</b>.
+              Integrated M.Tech Student at <b style={{ color: '#E040FB' }}>VIT Bhopal</b>. Engineering intelligent systems with{' '}
+              <i style={{ color: '#B97FFF' }}>Agentic AI, RAG</i>, and scalable{' '}
+              <b style={{ color: '#E040FB' }}>Full-Stack architectures</b>.
             </p>
 
             {/* Buttons */}
