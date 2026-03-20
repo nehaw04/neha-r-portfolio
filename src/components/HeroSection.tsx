@@ -4,10 +4,9 @@ import { useEffect, useState, useRef } from 'react';
 const roles = ['AI ENGINEER', 'ML ENGINEER', 'NLP ENGINEER', 'MODEL BUILDER', 'SYSTEM THINKER'];
 
 const metrics = [
-  { label: 'Accuracy', value: '94.2', unit: '%', delta: '↑ best in class' },
-  { label: 'Projects', value: '12', unit: '+', delta: '↑ shipped to prod' },
-  { label: 'Experience', value: '3', unit: 'yr', delta: '↑ production ML' },
-  { label: 'Papers', value: '2', unit: '+', delta: '↑ published' },
+  { label: 'Grad Year', value: '2027', unit: '', delta: '↑ VIT Bhopal' },
+  { label: 'AI/ML Projects', value: '10', unit: '+', delta: '↑ shipped & building' },
+  { label: 'Aptitude Solved', value: '300', unit: '+', delta: '↑ logic & quant' },
 ];
 
 const epochLog = [
@@ -60,11 +59,11 @@ const HeroSection = () => {
                 color: 'var(--text-very-muted)',
               }}
             >
-              Machine Learning · NLP · Computer Vision · MLOps
+              AI & ML Engineer · Full-Stack Developer
             </p>
 
             {/* Metric Cards */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6 sm:mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6 sm:mb-8">
               {metrics.map((m) => (
                 <div
                   key={m.label}
@@ -97,9 +96,9 @@ const HeroSection = () => {
                 color: 'var(--text-muted)',
               }}
             >
-              Pre-final year Integrated M.Tech student at <b style={{ color: '#E040FB' }}>VIT Bhopal</b> specializing in AIML.
-              I build <i style={{ color: '#B97FFF' }}>privacy-first AI systems</i>, agentic workflows, and scalable enterprise solutions
-              with a focus on <b style={{ color: '#E040FB' }}>real-world deployment</b>.
+              Integrated M.Tech Student at <b style={{ color: '#E040FB' }}>VIT Bhopal</b>. Engineering intelligent systems with{' '}
+              <i style={{ color: '#B97FFF' }}>Agentic AI, RAG</i>, and scalable{' '}
+              <b style={{ color: '#E040FB' }}>Full-Stack architectures</b>.
             </p>
 
             {/* Buttons */}

@@ -96,9 +96,9 @@ const Footer = () => {
 
               <div className="flex gap-8 mt-8">
                 {[
-                  { label: 'Projects', val: '12', unit: '+' },
-                  { label: 'Experience', val: '3', unit: 'yr' },
-                  { label: 'Papers', val: '2', unit: '' },
+                  { label: 'AI/ML Projects', val: '10', unit: '+' },
+                  { label: 'Grad Year', val: '2027', unit: '' },
+                  { label: 'Aptitude Solved', val: '300', unit: '+' },
                 ].map((s) => (
                   <div key={s.label}>
                     <div style={{ fontFamily: 'Outfit', fontSize: 28, fontWeight: 700 }}>
