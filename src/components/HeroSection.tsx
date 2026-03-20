@@ -32,27 +32,27 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-[58px]">
-      <div className="container mx-auto px-6 relative z-10 py-16">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 py-12 sm:py-16">
         {/* Breadcrumb */}
         <div
-          className="mb-8 text-[10px] uppercase font-mono"
+          className="mb-6 sm:mb-8 text-[10px] uppercase font-mono"
           style={{ letterSpacing: '1.5px', color: 'var(--text-very-muted)' }}
         >
           models / neha_r / v3.0
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
           {/* Left Column */}
           <div className="lg:col-span-3">
             {/* Name */}
-            <h1 style={{ fontFamily: 'Outfit', fontSize: 'clamp(48px, 6vw, 72px)', fontWeight: 900, lineHeight: 1.05 }}>
+            <h1 style={{ fontFamily: 'Outfit', fontSize: 'clamp(40px, 6vw, 72px)', fontWeight: 900, lineHeight: 1.05 }}>
               <span className="block text-white">NEHA R.</span>
               <span className="block gradient-text">{scrambledRole}</span>
             </h1>
 
             {/* Role line */}
             <p
-              className="mt-4 mb-8"
+              className="mt-3 sm:mt-4 mb-6 sm:mb-8"
               style={{
                 fontSize: 11,
                 letterSpacing: '3px',
@@ -64,11 +64,11 @@ const HeroSection = () => {
             </p>
 
             {/* Metric Cards */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6 sm:mb-8">
               {metrics.map((m) => (
                 <div
                   key={m.label}
-                  className="ml-card rounded-xl p-4 group cursor-default"
+                  className="ml-card rounded-xl p-3 sm:p-4 group cursor-default"
                   style={{ border: '1px solid var(--border-default)' }}
                 >
                   <div
@@ -77,7 +77,7 @@ const HeroSection = () => {
                   >
                     {m.label}
                   </div>
-                  <div style={{ fontFamily: 'Outfit', fontWeight: 700, fontSize: 28 }}>
+                  <div style={{ fontFamily: 'Outfit', fontWeight: 700, fontSize: 'clamp(22px, 3vw, 28px)' }}>
                     <span className="text-white">{m.value}</span>
                     <span style={{ color: '#E040FB' }}>{m.unit}</span>
                   </div>
@@ -90,7 +90,7 @@ const HeroSection = () => {
 
             {/* Description */}
             <p
-              className="mb-8 max-w-xl"
+              className="mb-6 sm:mb-8 max-w-xl"
               style={{
                 fontSize: 13,
                 lineHeight: 1.95,
@@ -103,7 +103,7 @@ const HeroSection = () => {
             </p>
 
             {/* Buttons */}
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
                 className="px-6 py-3 rounded-[9px] text-white text-[11px] font-semibold uppercase tracking-wider transition-transform hover:scale-[1.04]"
@@ -112,9 +112,10 @@ const HeroSection = () => {
                 View Experiments →
               </button>
               <a
-                href="/Neha_R_Resume.pdf"
-                download
-                className="px-6 py-3 rounded-[9px] text-[11px] font-semibold uppercase tracking-wider transition-all hover:text-[#E040FB] hover:border-[#B97FFF]"
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-[9px] text-[11px] font-semibold uppercase tracking-wider transition-all hover:text-[#E040FB] hover:border-[#B97FFF] text-center"
                 style={{
                   border: '1px solid rgba(120,100,255,0.25)',
                   color: 'var(--text-muted)',
@@ -125,8 +126,8 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Column — Training Panel */}
-          <div className="lg:col-span-2">
+          {/* Right Column — Training Panel (hidden on mobile) */}
+          <div className="hidden lg:block lg:col-span-2">
             <div
               className="rounded-2xl overflow-hidden"
               style={{ border: '1px solid rgba(120,100,255,0.15)' }}
@@ -153,17 +154,14 @@ const HeroSection = () => {
               {/* Loss Curve */}
               <div className="px-5 py-4">
                 <svg ref={svgRef} viewBox="0 0 300 120" className="w-full h-auto">
-                  {/* Grid lines */}
                   {[0, 30, 60, 90].map((y) => (
                     <line key={y} x1="0" y1={y} x2="300" y2={y} stroke="rgba(120,100,255,0.06)" strokeWidth="0.5" />
                   ))}
-                  {/* Loss curve area */}
                   <path
                     d="M0,15 C30,18 60,30 100,55 C140,72 200,95 280,105 L280,120 L0,120 Z"
                     fill="url(#lossGrad)"
                     opacity="0.15"
                   />
-                  {/* Loss curve */}
                   <path
                     d="M0,15 C30,18 60,30 100,55 C140,72 200,95 280,105"
                     fill="none"
@@ -171,7 +169,6 @@ const HeroSection = () => {
                     strokeWidth="2"
                     strokeLinecap="round"
                   />
-                  {/* Accuracy curve */}
                   <path
                     d="M0,100 C30,95 60,85 100,70 C140,55 200,30 280,18"
                     fill="none"
@@ -180,7 +177,6 @@ const HeroSection = () => {
                     strokeDasharray="4,3"
                     strokeLinecap="round"
                   />
-                  {/* Live dots */}
                   <circle cx="280" cy="105" r="3" fill="#E040FB">
                     <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite" />
                     <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
@@ -189,7 +185,6 @@ const HeroSection = () => {
                     <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite" />
                     <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
                   </circle>
-                  {/* Gradient def */}
                   <defs>
                     <linearGradient id="lossGrad" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="0%" stopColor="#E040FB" stopOpacity="0.4" />
