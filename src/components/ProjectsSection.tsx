@@ -6,7 +6,7 @@ const experiments = [
     year: '2024',
     badge: 'NLP',
     badgeColor: 'rgba(224,64,251,0.8)',
-    title: 'AutoForm-AI',
+    title: 'AutoForm AI',
     desc: 'Offline OCR system using Transformer models — 100% data privacy for sensitive document processing.',
     metrics: [
       { label: 'Accuracy', value: 94, display: '94.2%' },
@@ -14,13 +14,14 @@ const experiments = [
       { label: 'Latency', value: 15, display: '15ms' },
     ],
     tags: ['Python', 'PyTorch', 'Transformers', 'SHAP'],
+    github: 'https://github.com/nehaw04/AutoForm-AI',
   },
   {
     id: 'EXP-002',
     year: '2024',
     badge: 'ML',
     badgeColor: 'rgba(255,180,50,0.8)',
-    title: 'Agentic Loan Workflow',
+    title: 'Loan Buddy',
     desc: 'Autonomous AI system handling full loan lifecycle — data extraction to risk assessment in BFSI.',
     metrics: [
       { label: 'F1 Score', value: 89, display: '0.893' },
@@ -28,13 +29,14 @@ const experiments = [
       { label: 'Recall', value: 92, display: '92.1%' },
     ],
     tags: ['Python', 'Agentic AI', 'LangChain'],
+    github: 'https://github.com/nehaw04/Loan-Processing-Multi-Agent-System',
   },
   {
     id: 'EXP-003',
     year: '2024',
     badge: 'LLM',
     badgeColor: 'rgba(185,127,255,0.8)',
-    title: 'Agentic AI with RAG',
+    title: 'Agentic AI eBook Assistant',
     desc: 'Context-aware AI assistant using Retrieval-Augmented Generation on custom datasets.',
     metrics: [
       { label: 'Accuracy', value: 88, display: '88.4%' },
@@ -42,13 +44,14 @@ const experiments = [
       { label: 'Latency', value: 42, display: '42ms' },
     ],
     tags: ['RAG', 'LLMs', 'Python', 'FAISS'],
+    github: 'https://github.com/nehaw04/Agentic-AI-eBook-Assistant',
   },
   {
     id: 'EXP-004',
     year: '2025',
     badge: 'CV',
     badgeColor: 'rgba(95,255,160,0.8)',
-    title: 'Vision Pipeline',
+    title: 'Faculty Availability Indicator',
     desc: 'Real-time object detection and classification pipeline using YOLOv8 for industrial QA.',
     metrics: [
       { label: 'mAP@50', value: 91, display: '91.3%' },
@@ -56,6 +59,7 @@ const experiments = [
       { label: 'Precision', value: 93, display: '93.1%' },
     ],
     tags: ['YOLOv8', 'OpenCV', 'ONNX', 'Python'],
+    github: 'https://github.com/nehaw04/faculty-availability-indicator',
   },
 ];
 
@@ -96,12 +100,10 @@ const ProjectsSection = () => {
                 </span>
               </div>
 
-              {/* Title */}
               <h3 style={{ fontFamily: 'Outfit', fontSize: 20, fontWeight: 700, color: 'white' }}>
                 {exp.title}
               </h3>
 
-              {/* Desc */}
               <p className="mt-2 text-[11px] font-mono leading-relaxed" style={{ color: 'var(--text-muted)' }}>
                 {exp.desc}
               </p>
@@ -127,8 +129,8 @@ const ProjectsSection = () => {
                 ))}
               </div>
 
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mt-5">
+              {/* Tags + GitHub */}
+              <div className="flex flex-wrap items-center gap-2 mt-5">
                 {exp.tags.map((tag) => (
                   <span
                     key={tag}
@@ -141,6 +143,27 @@ const ProjectsSection = () => {
                     {tag}
                   </span>
                 ))}
+                <a
+                  href={exp.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-mono transition-all hover:border-[rgba(185,127,255,0.4)] hover:text-[#B97FFF]"
+                  style={{
+                    fontSize: 10,
+                    letterSpacing: 1,
+                    textTransform: 'uppercase',
+                    color: 'rgba(185,127,255,0.7)',
+                    background: 'rgba(120,100,255,0.06)',
+                    border: '1px solid rgba(120,100,255,0.15)',
+                    padding: '5px 12px',
+                    borderRadius: 100,
+                  }}
+                >
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  View on GitHub
+                </a>
               </div>
             </div>
           ))}

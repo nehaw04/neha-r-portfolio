@@ -271,3 +271,23 @@
   .animation-delay-700 { animation-delay: 700ms; }
   .animation-delay-800 { animation-delay: 800ms; }
 }
+
+/* Shake animation for form validation */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+.shake-field {
+  animation: shake 0.4s ease-out;
+}
+
+/* Mobile responsive overrides */
+@media (max-width: 768px) {
+  .grid-cols-2.sm\\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
