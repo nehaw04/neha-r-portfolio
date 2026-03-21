@@ -22,15 +22,6 @@ const layers = [
   },
   {
     index: 'L3',
-    type: 'ATTN',
-    tag: 'Engineering',
-    scrambleTexts: ['agentic.build(multi_agent=True)', 'rag.pipeline(scalable=True)'],
-    title: 'Full-Stack AI Engineering',
-    description: 'From developing Multi-Agent systems for finance to mastering Salesforce development, I focus on building technology that is smart, scalable, and secure.',
-    chips: ['params: Agentic AI', 'batch: RAG', 'dtype: full-stack'],
-  },
-  {
-    index: 'L4',
     type: 'OUTPUT',
     tag: 'Status',
     scrambleTexts: ['neha.available() → True', '# hire her now'],
