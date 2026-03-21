@@ -29,15 +29,6 @@ const layers = [
     description: 'Currently seeking opportunities in AI/ML engineering, NLP, and intelligent automation. Open to internships, research, and full-time roles.',
     chips: ['status: ready', 'mode: deploy', 'output: hire'],
   },
-  {
-    index: 'L4',
-    type: 'OUTPUT',
-    tag: 'Status',
-    scrambleTexts: ['neha.available() → True', '# hire her now'],
-    title: 'Ready for Deployment',
-    description: 'Currently seeking opportunities in AI/ML engineering, NLP, and intelligent automation. Open to internships, research, and full-time roles.',
-    chips: ['status: ready', 'mode: deploy', 'output: hire'],
-  },
 ];
 
 const LayerCard = ({ layer, index }: { layer: typeof layers[0]; index: number }) => {
