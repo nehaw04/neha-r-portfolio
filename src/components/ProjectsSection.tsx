@@ -91,6 +91,11 @@ const ProjectsSection = () => {
               <h3 style={{ fontFamily: 'Outfit', fontSize: 20, fontWeight: 700, color: 'white' }}>
                 {exp.title}
               </h3>
+              {'headline' in exp && (
+                <p className="text-[10px] font-mono mt-1" style={{ color: '#B97FFF', letterSpacing: '0.5px' }}>
+                  {exp.headline}
+                </p>
+              )}
 
               <p className="mt-2 text-[11px] font-mono leading-relaxed" style={{ color: 'var(--text-muted)' }}>
                 {exp.desc}
