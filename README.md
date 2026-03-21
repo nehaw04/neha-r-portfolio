@@ -9,21 +9,20 @@
 ██║ ╚████║███████╗██║  ██║██║  ██║    ██║  ██║
 ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝  ╚═╝
 ```
-### `model: neha_r_v3.0` · `status: deployed` · `accuracy: 92%`
+### `model: neha_r_v3.0` · `status: deployed` · `grad: 2027`
 
 <br/>
 
 [![Portfolio Live](https://img.shields.io/badge/🚀_PORTFOLIO-LIVE-E040FB?style=for-the-badge&labelColor=0C0C14)](https://neha-r-portfolio.lovable.app)
-[![Open to Work](https://img.shields.io/badge/⚡_STATUS-OPEN_TO_WORK-5FFFA0?style=for-the-badge&labelColor=0C0C14)](mailto:nehar.xiaeroor@email.com)
-[![VIT Pre-Final Year](https://img.shields.io/badge/🎓_VIT-PRE-FINAL-YEAR_B97FFF?style=for-the-badge&labelColor=0C0C14)](#)
-[![Competition](https://img.shields.io/badge/🏆_PORTFOLIO-COMPETITION-FF6EC7?style=for-the-badge&labelColor=0C0C14)](#)
+[![Open to Work](https://img.shields.io/badge/⚡_STATUS-OPEN_TO_WORK-5FFFA0?style=for-the-badge&labelColor=0C0C14)](mailto:neha@email.com)
+[![VIT Bhopal](https://img.shields.io/badge/🎓_VIT_BHOPAL-INT._M.TECH_(AI_&_ML)-B97FFF?style=for-the-badge&labelColor=0C0C14)](#)
 
 <br/>
 
 > *"I don't just train models — I build intelligent systems that survive production,*
 > *handle real data, and make teams ask: how did we live without this?"*
 >
-> — **Neha R**, AI & ML Engineer
+> — **Neha R**, AI & ML Engineer · Full-Stack Developer
 
 <br/>
 
@@ -46,15 +45,11 @@
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                     NEHA_R · MODEL TRAINING DASHBOARD                   │
 ├──────────────┬──────────────┬──────────────┬──────────────┬─────────────┤
-│   L1 INPUT   │  L2 HIDDEN   │  L3 ATTENTION │  L4 OUTPUT   │   DEPLOY   │
-│              │              │               │              │            │
-│  VIT · CS    │  Full-Stack  │ Explainability│   Available  │  Hire Her  │
-│  Graduate    │  ML Systems  │  SHAP · LIME  │  June 2025   │    Now     │
+│   L1 INPUT   │  L2 HIDDEN   │  L3 OUTPUT   │   DEPLOY     │   STATUS   │
+│              │              │              │              │            │
+│  VIT Bhopal  │  Salesforce  │   AI & ML    │  Available   │  Hire Her  │
+│  Int. M.Tech │  Dev Intern  │   Engineer   │  June 2025   │    Now     │
 └──────────────┴──────────────┴──────────────┴──────────────┴─────────────┘
-        │              │               │              │
-        └──────────────┴───────────────┴──────────────┘
-                                │
-                    loss: 0.082 · acc: 92.4%
 ```
 
 ---
@@ -65,11 +60,11 @@
 
 | Parameter | Value | Status |
 |:---:|:---:|:---:|
-| `accuracy` | **92.4%** | 🟢 Best in class |
-| `projects_shipped` | **12+** | 🟢 Production verified |
-| `experience` | **3 years** | 🟢 End-to-end ML |
-| `publications` | **2** | 🟢 Peer reviewed |
-| `availability` | **June 2025** | 🟢 Open to deploy |
+| `grad_year` | **2027** | 🟢 Int. M.Tech (AI & ML) |
+| `ai_ml_projects` | **10+** | 🟢 Production & research |
+| `aptitude_solved` | **300+** | 🟢 Competitive programming |
+| `internship` | **Impaqtive** | 🟢 Salesforce Dev Intern |
+| `availability` | **Open** | 🟢 Ready to deploy |
 
 </div>
 
@@ -78,94 +73,63 @@
 ## 🧠 Experiment Runs · Projects
 
 <details>
-<summary><b>EXP-001 · Sentiment Engine · NLP</b> &nbsp;—&nbsp; <code>acc: 92%</code> &nbsp;·&nbsp; <code>10k req/day</code></summary>
+<summary><b>EXP-001 · AutoForm-AI · Privacy-First Automated Onboarding</b> &nbsp;—&nbsp; <code>privacy: 100% local</code> &nbsp;·&nbsp; <code>< 2s per form</code></summary>
 
 <br/>
 
 ```python
 experiment = {
     "id":          "EXP-001",
-    "domain":      "NLP · Financial News",
-    "model":       "BERT (fine-tuned)",
-    "accuracy":    "92.4%",
-    "f1_score":    "89.1%",
-    "latency":     "12ms",
-    "throughput":  "10,000 req/day",
-    "status":      "✅ Production (99.9% uptime)",
-    "stack":       ["BERT", "PyTorch", "FastAPI", "HuggingFace"]
+    "domain":      "Browser Extension · OCR · Local LLM",
+    "headline":    "Privacy-First Automated Onboarding",
+    "data_privacy": "100% (Local-only processing)",
+    "processing":  "< 2 Seconds per form",
+    "status":      "✅ Built & Tested",
+    "stack":       ["Tesseract.js", "WebLLM (quantized)", "Chrome Extension API"]
 }
 ```
 
-**What it does:** Multi-class sentiment detection on live financial news feeds. Runs in production handling 10k requests daily without breaking a sweat.
+**What it does:** A browser extension that eliminates manual data entry by processing ID cards locally. It uses OCR to extract text and a local LLM to map that data into web forms without ever sending sensitive info to the cloud.
 
 </details>
 
 <details>
-<summary><b>EXP-002 · Defect Detector · Computer Vision</b> &nbsp;—&nbsp; <code>precision: 88%</code> &nbsp;·&nbsp; <code>28fps real-time</code></summary>
+<summary><b>EXP-002 · Loan Buddy · Multi-Agent Financial Automation</b> &nbsp;—&nbsp; <code>efficiency: +40%</code> &nbsp;·&nbsp; <code>lead-to-sanction</code></summary>
 
 <br/>
 
 ```python
 experiment = {
     "id":          "EXP-002",
-    "domain":      "Computer Vision · Manufacturing",
-    "model":       "YOLOv8 (edge-optimized)",
-    "precision":   "88%",
-    "recall":      "85%",
-    "fps":         "28fps real-time",
-    "improvement": "35% fewer false positives",
-    "status":      "✅ Live on factory floor 24/7",
-    "stack":       ["YOLOv8", "OpenCV", "TensorFlow", "Edge AI"]
+    "domain":      "Agentic AI · Finance · Automation",
+    "headline":    "Multi-Agent Financial Automation",
+    "efficiency":  "40% reduction in manual processing",
+    "architecture": "Multi-Agent (LangChain / CrewAI)",
+    "scope":       "Lead-to-Sanction Lifecycle",
+    "status":      "✅ Framework Complete",
+    "stack":       ["LangChain", "CrewAI", "Python", "Multi-Agent Systems"]
 }
 ```
 
-**What it does:** Real-time QA on manufacturing lines deployed on edge hardware. Runs 24/7 on the factory floor, zero cloud dependency.
+**What it does:** An intelligent framework using specialized AI agents to automate the end-to-end loan lifecycle. The system manages everything from initial lead capture and document verification to final sanctioning logic.
 
 </details>
 
 <details>
-<summary><b>EXP-003 · RAG Chatbot · LLM</b> &nbsp;—&nbsp; <code>hallucination ↓67%</code> &nbsp;·&nbsp; <code>coverage: 91%</code></summary>
+<summary><b>EXP-003 · Faculty Availability Indicator</b> &nbsp;—&nbsp; <code>real-time tracking</code></summary>
 
 <br/>
 
 ```python
 experiment = {
-    "id":              "EXP-003",
-    "domain":          "LLM · Enterprise QA",
-    "model":           "GPT-4 + LangChain RAG",
-    "qa_accuracy":     "84%",
-    "hallucination":   "↓ 67% (custom guardrails)",
-    "coverage":        "91%",
-    "vector_db":       "Pinecone",
-    "status":          "✅ Enterprise deployed",
-    "stack":           ["LangChain", "Pinecone", "GPT-4", "RAG"]
+    "id":          "EXP-003",
+    "domain":      "Full-Stack · Campus Utility",
+    "status":      "✅ Built",
+    "stack":       ["React", "Node.js", "Real-time Updates"]
 }
 ```
 
-**What it does:** Domain-specific QA system with custom hallucination guardrails. Enterprise clients trust it because it knows what it doesn't know.
-
-</details>
-
-<details>
-<summary><b>EXP-004 · Churn Predictor · ML + XAI</b> &nbsp;—&nbsp; <code>AUC: 0.91</code> &nbsp;·&nbsp; <code>churn ↓18%</code></summary>
-
-<br/>
-
-```python
-experiment = {
-    "id":          "EXP-004",
-    "domain":      "ML · SaaS · Explainable AI",
-    "model":       "XGBoost + SHAP",
-    "auc_roc":     "0.91",
-    "precision":   "86%",
-    "impact":      "18% churn reduction",
-    "explainability": "SHAP feature attribution per prediction",
-    "status":      "✅ Integrated in SaaS product",
-    "stack":       ["XGBoost", "SHAP", "Scikit-learn", "SQL"]
-}
-```
-
-**What it does:** Predicts churn with explainability per prediction so the sales team knows exactly which lever to pull.
+**What it does:** A real-time system for tracking faculty availability on campus.
 
 </details>
 
@@ -174,13 +138,30 @@ experiment = {
 ## ⚙️ Hyperparameters · Skills
 
 ```
-skill_weights.json
+ai_ml_config.json
 ──────────────────────────────────────────────────────
-deep_learning     ████████████████████░░  0.90
-nlp_llms          ███████████████████░░░  0.88
-computer_vision   ██████████████████░░░░  0.82
-mlops_infra       ███████████████░░░░░░░  0.75
-data_engineering  ██████████████░░░░░░░░  0.70
+transformers      ████████████████████░░  AI & ML
+rag_systems       ███████████████████░░░  AI & ML
+agentic_ai        ██████████████████░░░░  AI & ML
+pytorch           ███████████████████░░░  AI & ML
+cnns              ██████████████████░░░░  AI & ML
+──────────────────────────────────────────────────────
+
+stack_config.yml
+──────────────────────────────────────────────────────
+python            ████████████████████░░  Languages
+apex              ██████████████████░░░░  Salesforce
+java              █████████████████░░░░░  Languages
+r_lang            ████████████████░░░░░░  Languages
+salesforce        ██████████████████░░░░  Cloud
+aws               ███████████████░░░░░░░  Cloud
+──────────────────────────────────────────────────────
+
+strengths.json
+──────────────────────────────────────────────────────
+math_aptitude     ████████████████████░░  Core
+logic_building    ███████████████████░░░  Core
+competitive_prog  ██████████████████░░░░  Core
 ──────────────────────────────────────────────────────
 ```
 
@@ -196,16 +177,16 @@ channels:
   - production
 
 dependencies:
-  - python: "3.11"
-  - pytorch: "2.2"
-  - tensorflow: "2.15"
-  - huggingface: "transformers"
-  - langchain: "0.2"
-  - pinecone: "3.0"
-  - fastapi: "0.110"
-  - docker: "latest"
-  - aws: "ec2 · s3 · sagemaker"
-  - git: "always"
+  - python: "primary"
+  - apex: "salesforce"
+  - java: "core"
+  - r: "analytics"
+  - pytorch: "deep learning"
+  - langchain: "agentic AI"
+  - crewai: "multi-agent"
+  - tesseract: "OCR"
+  - salesforce: "CRM & admin"
+  - aws: "cloud infra"
 
 portfolio_stack:
   - framework: "React + TypeScript"
@@ -247,9 +228,9 @@ portfolio_stack:
 |---|---|---|
 | **Nav** | Model Registry | `neha_r.model` · `Deploy Me →` |
 | **Hero** | Training Dashboard | Live loss curve · epoch logs · metrics |
-| **About** | Neural Architecture | L1 INPUT → L2 HIDDEN → L3 ATTN → L4 OUTPUT |
-| **Projects** | Experiment Runs | EXP-001 to EXP-004 with real metric bars |
-| **Skills** | Hyperparameters | `skill_weights.json` + `environment.yml` |
+| **About** | Neural Architecture | L1 INPUT → L2 HIDDEN → L3 OUTPUT |
+| **Projects** | Experiment Runs | EXP-001 to EXP-003 with real metric bars |
+| **Skills** | Hyperparameters | `ai_ml_config.json` + `stack_config.yml` |
 | **Contact** | Model Deployment | `// ready to deploy` |
 
 </div>
@@ -324,7 +305,7 @@ open http://localhost:8080
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/EMAIL-nehar.xiaerror@email.com-E040FB?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0C0C14)](mailto:neha@email.com)
+[![Email](https://img.shields.io/badge/EMAIL-neha@email.com-E040FB?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0C0C14)](mailto:neha@email.com)
 [![LinkedIn](https://img.shields.io/badge/LINKEDIN-neha--r-B97FFF?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0C0C14)](https://linkedin.com/in/nehxr)
 [![GitHub](https://img.shields.io/badge/GITHUB-neha--r-5FFFA0?style=for-the-badge&logo=github&logoColor=white&labelColor=0C0C14)](https://github.com/nehaw04)
 
@@ -336,10 +317,10 @@ open http://localhost:8080
 
 ```
 neha_r · v3.0.0
-Model trained on 3 years of production ML.
+Int. M.Tech (AI & ML) · VIT Bhopal · Class of 2027
 © 2025 · All rights reserved.
 ```
 
-**⭐ If this portfolio wins the competition, star this repo.**
+**⭐ Star this repo if you like the portfolio.**
 
 </div>
