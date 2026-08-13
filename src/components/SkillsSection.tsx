@@ -4,19 +4,19 @@ const categories = [
   {
     title: 'AI & Machine Learning',
     file: 'ai_ml_config.json',
-    items: ['Transformers', 'RAG', 'Agentic AI', 'PyTorch', 'CNNs'],
+    items: ['LangGraph', 'LangChain', 'RAG', 'Agentic AI', 'Transformers', 'PyTorch', 'Pinecone', 'CNNs', 'YOLOv8', 'ONNX'],
     color: '#E040FB',
   },
   {
-    title: 'Languages & Cloud',
+    title: 'Languages, Frameworks & Cloud',
     file: 'stack_config.yml',
-    items: ['Python', 'Apex', 'Java', 'R', 'Salesforce', 'AWS'],
+    items: ['Python', 'FastAPI', 'Gradio', 'CrewAI', 'Streamlit', 'Apex', 'Java', 'R', 'Salesforce', 'AWS'],
     color: '#B97FFF',
   },
   {
     title: 'Core Strengths',
     file: 'strengths.json',
-    items: ['Mathematical Aptitude', 'Logic Building', 'Competitive Programming'],
+    items: ['Mathematical Aptitude', 'Logic Building', 'Competitive Programming', 'System Design'],
     color: '#5FFFA0',
   },
 ];
@@ -41,11 +41,11 @@ const SkillsSection = () => {
               className="scroll-reveal ml-card rounded-2xl p-5"
               style={{ transitionDelay: `${ci * 150}ms` }}
             >
-              <div className="text-[12px] font-mono mb-2" style={{ color: 'var(--text-very-muted)' }}>
+              <div className="text-[14px] font-mono mb-2" style={{ color: 'var(--text-very-muted)' }}>
                 {cat.file}
               </div>
               <h3
-                className="text-[16px] font-semibold mb-4"
+                className="text-[18px] font-semibold mb-4"
                 style={{ fontFamily: 'Outfit', color: cat.color }}
               >
                 {cat.title}
@@ -73,7 +73,7 @@ const SkillsSection = () => {
                       style={{ background: cat.color }}
                     />
                     <span
-                      className="text-[12px] font-mono group-hover:text-[#E040FB] transition-colors"
+                      className="text-[14px] font-mono group-hover:text-[#E040FB] transition-colors"
                       style={{ color: 'var(--text-muted)' }}
                     >
                       {item}
