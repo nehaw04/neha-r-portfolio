@@ -41,11 +41,11 @@ const SkillsSection = () => {
               className="scroll-reveal ml-card rounded-2xl p-5"
               style={{ transitionDelay: `${ci * 150}ms` }}
             >
-              <div className="text-[12px] font-mono mb-2" style={{ color: 'var(--text-very-muted)' }}>
+              <div className="text-[14px] font-mono mb-2" style={{ color: 'var(--text-very-muted)' }}>
                 {cat.file}
               </div>
               <h3
-                className="text-[16px] font-semibold mb-4"
+                className="text-[18px] font-semibold mb-4"
                 style={{ fontFamily: 'Outfit', color: cat.color }}
               >
                 {cat.title}
