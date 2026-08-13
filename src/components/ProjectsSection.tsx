@@ -197,7 +197,7 @@ const ProjectsSection = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 font-mono transition-all hover:border-[rgba(95,255,160,0.4)] hover:text-[#5FFFA0]"
                     style={{
-                      fontSize: 10,
+                      fontSize: 12,
                       letterSpacing: 1,
                       textTransform: 'uppercase',
                       color: 'rgba(95,255,160,0.8)',

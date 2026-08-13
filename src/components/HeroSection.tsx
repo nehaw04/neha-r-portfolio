@@ -34,7 +34,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 sm:px-6 relative z-10 py-12 sm:py-16">
         {/* Breadcrumb */}
         <div
-          className="mb-6 sm:mb-8 text-[10px] uppercase font-mono"
+          className="mb-6 sm:mb-8 text-[12px] uppercase font-mono"
           style={{ letterSpacing: '1.5px', color: 'var(--text-very-muted)' }}
         >
           models / neha_r / v3.0
@@ -53,7 +53,7 @@ const HeroSection = () => {
             <p
               className="mt-3 sm:mt-4 mb-6 sm:mb-8"
               style={{
-                fontSize: 11,
+                fontSize: 13,
                 letterSpacing: '3px',
                 textTransform: 'uppercase',
                 color: 'var(--text-very-muted)',
@@ -71,7 +71,7 @@ const HeroSection = () => {
                   style={{ border: '1px solid var(--border-default)' }}
                 >
                   <div
-                    className="text-[9px] uppercase mb-2 font-mono"
+                    className="text-[11px] uppercase mb-2 font-mono"
                     style={{ color: 'var(--text-very-muted)', letterSpacing: '1px' }}
                   >
                     {m.label}
@@ -80,7 +80,7 @@ const HeroSection = () => {
                     <span className="text-white">{m.value}</span>
                     <span style={{ color: '#E040FB' }}>{m.unit}</span>
                   </div>
-                  <div className="text-[10px] mt-1 font-mono" style={{ color: '#5FFFA0' }}>
+                  <div className="text-[12px] mt-1 font-mono" style={{ color: '#5FFFA0' }}>
                     {m.delta}
                   </div>
                 </div>
@@ -91,7 +91,7 @@ const HeroSection = () => {
             <p
               className="mb-6 sm:mb-8 max-w-xl"
               style={{
-                fontSize: 13,
+                fontSize: 14,
                 lineHeight: 1.95,
                 color: 'var(--text-muted)',
               }}
@@ -105,7 +105,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-6 py-3 rounded-[9px] text-white text-[11px] font-semibold uppercase tracking-wider transition-transform hover:scale-[1.04]"
+                className="px-6 py-3 rounded-[9px] text-white text-[13px] font-semibold uppercase tracking-wider transition-transform hover:scale-[1.04]"
                 style={{ background: 'linear-gradient(135deg, #7B5EA7, #E040FB)' }}
               >
                 View Experiments →
@@ -114,7 +114,7 @@ const HeroSection = () => {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 rounded-[9px] text-[11px] font-semibold uppercase tracking-wider transition-all hover:text-[#E040FB] hover:border-[#B97FFF] text-center"
+                className="px-6 py-3 rounded-[9px] text-[13px] font-semibold uppercase tracking-wider transition-all hover:text-[#E040FB] hover:border-[#B97FFF] text-center"
                 style={{
                   border: '1px solid rgba(120,100,255,0.25)',
                   color: 'var(--text-muted)',
