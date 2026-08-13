@@ -22,7 +22,7 @@ const MarqueeStrip = () => {
             <span
               className="font-mono mx-6"
               style={{
-                fontSize: 9,
+                fontSize: 12,
                 textTransform: 'uppercase',
                 letterSpacing: '2px',
                 color: 'rgba(226,224,255,0.15)',

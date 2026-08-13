@@ -67,7 +67,7 @@ const LayerCard = ({ layer, index }: { layer: typeof layers[0]; index: number })
       {/* Right content */}
       <div className="flex-1 p-6">
         <span
-          className="inline-block px-2 py-0.5 rounded text-[9px] uppercase font-mono mb-2"
+          className="inline-block px-2 py-0.5 rounded text-[11px] uppercase font-mono mb-2"
           style={{
             letterSpacing: '1px',
             background: 'rgba(224,64,251,0.1)',
@@ -78,7 +78,7 @@ const LayerCard = ({ layer, index }: { layer: typeof layers[0]; index: number })
         </span>
 
         <div
-          className="font-mono text-[11px] mb-3 h-5 overflow-hidden"
+          className="font-mono text-[13px] mb-3 h-6 overflow-hidden"
           style={{ color: '#B97FFF' }}
         >
           {scrambled}
@@ -88,7 +88,7 @@ const LayerCard = ({ layer, index }: { layer: typeof layers[0]; index: number })
           {layer.title}
         </h3>
 
-        <p className="mt-2 text-[12px] leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+        <p className="mt-2 text-[14px] leading-relaxed" style={{ color: 'var(--text-muted)' }}>
           {layer.description}
         </p>
 
@@ -96,7 +96,7 @@ const LayerCard = ({ layer, index }: { layer: typeof layers[0]; index: number })
           {layer.chips.map((chip) => (
             <span
               key={chip}
-              className="text-[9px] font-mono px-2 py-1 rounded"
+              className="text-[11px] font-mono px-2 py-1 rounded"
               style={{
                 background: 'rgba(120,100,255,0.07)',
                 color: 'var(--text-very-muted)',

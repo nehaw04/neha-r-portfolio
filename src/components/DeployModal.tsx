@@ -64,7 +64,7 @@ const DeployModal = ({ open, onClose }: DeployModalProps) => {
         {/* Eyebrow */}
         <span
           className="font-mono block mb-3"
-          style={{ fontSize: 11, letterSpacing: 3, color: '#B97FFF' }}
+          style={{ fontSize: 13, letterSpacing: 3, color: '#B97FFF' }}
         >
           // ready_to_deploy
         </span>
@@ -89,7 +89,7 @@ const DeployModal = ({ open, onClose }: DeployModalProps) => {
               borderRadius: 10,
               padding: '16px 20px',
               color: copied ? '#5FFFA0' : 'var(--text-muted)',
-              fontSize: 12,
+              fontSize: 14,
             }}
           >
             <span>{copied ? '✓ Copied!' : 'nehar.xiaeroor@email.com'}</span>
@@ -108,7 +108,7 @@ const DeployModal = ({ open, onClose }: DeployModalProps) => {
               borderRadius: 10,
               padding: '16px 20px',
               color: 'var(--text-muted)',
-              fontSize: 12,
+              fontSize: 14,
             }}
           >
             <span>LinkedIn — linkedin.com/in/nehxr</span>
@@ -126,7 +126,7 @@ const DeployModal = ({ open, onClose }: DeployModalProps) => {
               borderRadius: 10,
               padding: '16px 20px',
               color: 'white',
-              fontSize: 12,
+              fontSize: 14,
               fontWeight: 600,
             }}
           >
