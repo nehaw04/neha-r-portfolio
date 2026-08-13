@@ -4,19 +4,19 @@ const categories = [
   {
     title: 'AI & Machine Learning',
     file: 'ai_ml_config.json',
-    items: ['Transformers', 'RAG', 'Agentic AI', 'PyTorch', 'CNNs'],
+    items: ['LangGraph', 'LangChain', 'RAG', 'Agentic AI', 'Transformers', 'PyTorch', 'Pinecone', 'CNNs', 'YOLOv8', 'ONNX'],
     color: '#E040FB',
   },
   {
-    title: 'Languages & Cloud',
+    title: 'Languages, Frameworks & Cloud',
     file: 'stack_config.yml',
-    items: ['Python', 'Apex', 'Java', 'R', 'Salesforce', 'AWS'],
+    items: ['Python', 'FastAPI', 'Gradio', 'CrewAI', 'Streamlit', 'Apex', 'Java', 'R', 'Salesforce', 'AWS'],
     color: '#B97FFF',
   },
   {
     title: 'Core Strengths',
     file: 'strengths.json',
-    items: ['Mathematical Aptitude', 'Logic Building', 'Competitive Programming'],
+    items: ['Mathematical Aptitude', 'Logic Building', 'Competitive Programming', 'System Design'],
     color: '#5FFFA0',
   },
 ];
