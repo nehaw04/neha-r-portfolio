@@ -82,7 +82,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Left */}
             <div className="p-6 sm:p-8 md:p-12" style={{ background: 'rgba(185,127,255,0.04)' }}>
-              <span className="text-[9px] font-mono" style={{ color: '#B97FFF' }}>
+              <span className="text-[11px] font-mono" style={{ color: '#B97FFF' }}>
                 // ready to deploy
               </span>
 
@@ -90,7 +90,7 @@ const Footer = () => {
                 Let's build <span className="gradient-text">something</span> intelligent.
               </h3>
 
-              <p className="mt-4 text-[11px] font-mono leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+              <p className="mt-4 text-[13px] font-mono leading-relaxed" style={{ color: 'var(--text-muted)' }}>
                 Currently open to internship or project opportunities in AI, Machine Learning, or Salesforce Development.
               </p>
 
@@ -105,7 +105,7 @@ const Footer = () => {
                       <span className="text-white">{s.val}</span>
                       <span style={{ color: '#E040FB' }}>{s.unit}</span>
                     </div>
-                    <div className="text-[9px] font-mono uppercase mt-1" style={{ color: 'var(--text-very-muted)', letterSpacing: '1px' }}>
+                    <div className="text-[11px] font-mono uppercase mt-1" style={{ color: 'var(--text-very-muted)', letterSpacing: '1px' }}>
                       {s.label}
                     </div>
                   </div>
@@ -125,7 +125,7 @@ const Footer = () => {
                   <p style={{ fontFamily: 'Outfit', fontSize: 14, color: 'white' }}>
                     Message sent! I'll get back to you soon.
                   </p>
-                  <p className="mt-1 text-[11px] font-mono" style={{ color: 'var(--text-muted)' }}>
+                  <p className="mt-1 text-[13px] font-mono" style={{ color: 'var(--text-muted)' }}>
                     Usually within 24 hours.
                   </p>
                 </div>
@@ -140,7 +140,7 @@ const Footer = () => {
                       padding: '13px 16px',
                       color: '#E2E0FF',
                       fontFamily: "'IBM Plex Mono', monospace",
-                      fontSize: 12,
+                      fontSize: 14,
                       outline: 'none',
                       width: '100%',
                       transition: 'border-color 0.2s',
@@ -179,7 +179,7 @@ const Footer = () => {
                       color: 'white',
                       padding: 14,
                       borderRadius: 10,
-                      fontSize: 12,
+                      fontSize: 14,
                       letterSpacing: 1,
                       border: 'none',
                       cursor: formState === 'sending' ? 'wait' : 'pointer',
@@ -188,7 +188,7 @@ const Footer = () => {
                     {formState === 'sending' ? 'Sending...' : 'Send Message →'}
                   </button>
                   {formState === 'error' && (
-                    <p className="text-[11px] font-mono mt-1" style={{ color: '#FF6B8A' }}>
+                    <p className="text-[13px] font-mono mt-1" style={{ color: '#FF6B8A' }}>
                       Something went wrong. Please email me directly.
                     </p>
                   )}
@@ -211,14 +211,14 @@ const Footer = () => {
                     style={{ transitionDelay: `${i * 100}ms`, borderBottom: i < contactLinks.length - 1 ? '1px solid rgba(120,100,255,0.08)' : 'none' }}
                   >
                     <div>
-                      <div className="text-[9px] uppercase font-mono mb-1" style={{ letterSpacing: '1.5px', color: 'rgba(185,127,255,0.5)' }}>
+                      <div className="text-[11px] uppercase font-mono mb-1" style={{ letterSpacing: '1.5px', color: 'rgba(185,127,255,0.5)' }}>
                         {link.label}
                       </div>
-                      <div className="contact-value text-[12px] font-mono transition-colors" style={{ color: 'var(--text-muted)' }}>
+                      <div className="contact-value text-[14px] font-mono transition-colors" style={{ color: 'var(--text-muted)' }}>
                         {link.value}
                       </div>
                     </div>
-                    <span className="contact-arrow text-[14px] transition-transform" style={{ color: 'var(--text-very-muted)' }}>
+                    <span className="contact-arrow text-[16px] transition-transform" style={{ color: 'var(--text-very-muted)' }}>
                       ↗
                     </span>
                   </Tag>
@@ -229,7 +229,7 @@ const Footer = () => {
         </div>
 
         {/* Footer line */}
-        <div className="flex flex-col sm:flex-row items-center justify-between mt-12 text-[10px] font-mono gap-2">
+        <div className="flex flex-col sm:flex-row items-center justify-between mt-12 text-[12px] font-mono gap-2">
           <span style={{ color: '#B97FFF' }}>neha_r · v3.0.0</span>
           <span className="text-center" style={{ color: 'var(--text-whisper)' }}>
             © 2025 · Model trained on 3 years of production ML · All rights reserved.
