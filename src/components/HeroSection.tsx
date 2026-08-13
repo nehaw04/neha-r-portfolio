@@ -144,7 +144,7 @@ const HeroSection = () => {
                     <span className="absolute inset-0 rounded-full bg-[#5FFFA0] mint-pulse" />
                     <span className="relative block w-2 h-2 rounded-full bg-[#5FFFA0]" />
                   </span>
-                  <span className="text-[9px] uppercase font-mono font-semibold" style={{ color: '#5FFFA0', letterSpacing: '1px' }}>
+                  <span className="text-[11px] uppercase font-mono font-semibold" style={{ color: '#5FFFA0', letterSpacing: '1px' }}>
                     LIVE
                   </span>
                 </div>
@@ -192,11 +192,11 @@ const HeroSection = () => {
                   </defs>
                 </svg>
                 <div className="flex gap-6 mt-2">
-                  <div className="flex items-center gap-2 text-[9px] font-mono">
+                  <div className="flex items-center gap-2 text-[11px] font-mono">
                     <span className="w-3 h-[2px] bg-[#E040FB] rounded" />
                     <span style={{ color: 'var(--text-very-muted)' }}>loss</span>
                   </div>
-                  <div className="flex items-center gap-2 text-[9px] font-mono">
+                  <div className="flex items-center gap-2 text-[11px] font-mono">
                     <span className="w-3 h-[2px] bg-[#5FFFA0] rounded" style={{ opacity: 0.7 }} />
                     <span style={{ color: 'var(--text-very-muted)' }}>accuracy</span>
                   </div>
@@ -205,7 +205,7 @@ const HeroSection = () => {
 
               {/* Epoch Log */}
               <div
-                className="px-5 py-3 space-y-1.5 font-mono text-[10px]"
+                className="px-5 py-3 space-y-1.5 font-mono text-[12px]"
                 style={{ borderTop: '1px solid rgba(120,100,255,0.08)', maxHeight: 150, overflow: 'hidden' }}
               >
                 {epochLog.slice(0, visibleLines).map((line, i) => (
