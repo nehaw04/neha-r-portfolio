@@ -49,6 +49,39 @@ const experiments = [
     tags: ['YOLOv8', 'OpenCV', 'ONNX', 'Python'],
     github: 'https://github.com/nehaw04/faculty-availability-indicator',
   },
+  {
+    id: 'EXP-004',
+    year: '2025',
+    badge: 'Backend',
+    badgeColor: 'rgba(120,100,255,0.8)',
+    title: 'Allo Allocation Engine',
+    headline: 'Timed Inventory Reservation Engine for Multi-Warehouse Checkout',
+    desc: 'A race-condition-free inventory reservation system for e-commerce checkout flows. It places a timed 10-minute hold on inventory at checkout — confirmed on payment success, released on cancellation or expiry — using PostgreSQL pessimistic row locking to guarantee serialized writes under contention.',
+    metrics: [
+      { label: 'Concurrency Model', value: 100, display: 'PostgreSQL Row Locking' },
+      { label: 'Hold Window', value: 100, display: '10-Minute Reservation' },
+      { label: 'Overselling Risk', value: 0, display: 'Zero Overselling' },
+    ],
+    tags: ['Next.js 16', 'TypeScript', 'PostgreSQL', 'Prisma', 'Zod', 'Tailwind CSS v4'],
+    github: 'https://github.com/nehaw04/Inventory-Reservation-Engine',
+    liveDemo: 'https://allo-allocation-engine.vercel.app',
+  },
+  {
+    id: 'EXP-005',
+    year: '2025',
+    badge: 'NLP',
+    badgeColor: 'rgba(224,64,251,0.8)',
+    title: 'Luggage Market Intelligence Dashboard',
+    headline: 'AI-Powered Competitive Brand Analysis for E-Commerce',
+    desc: 'An end-to-end market intelligence platform that scrapes, cleans, and analyzes customer reviews across competing luggage brands on Amazon India, then uses an LLM pipeline to surface strategic insights like positioning gaps, value traps, and review-trust anomalies.',
+    metrics: [
+      { label: 'Reviews Analyzed', value: 90, display: '450+' },
+      { label: 'Brands Tracked', value: 75, display: '6' },
+      { label: 'Products Scraped', value: 85, display: '50+' },
+    ],
+    tags: ['Python', 'Playwright', 'Gemini 2.5 Flash', 'sentence-transformers', 'SQLite', 'Streamlit', 'Plotly'],
+    github: 'https://github.com/nehaw04/brand-sentiment-analyzer',
+  },
 ];
 
 const ProjectsSection = () => {
