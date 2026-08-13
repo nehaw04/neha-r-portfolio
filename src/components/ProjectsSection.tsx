@@ -54,7 +54,7 @@ const experiments = [
     year: '2025',
     badge: 'Backend',
     badgeColor: 'rgba(120,100,255,0.8)',
-    title: 'Allo Allocation Engine',
+    title: 'Inventory Reservation Engine',
     headline: 'Timed Inventory Reservation Engine for Multi-Warehouse Checkout',
     desc: 'A race-condition-free inventory reservation system for e-commerce checkout flows. It places a timed 10-minute hold on inventory at checkout — confirmed on payment success, released on cancellation or expiry — using PostgreSQL pessimistic row locking to guarantee serialized writes under contention.',
     metrics: [
@@ -106,11 +106,11 @@ const ProjectsSection = () => {
             >
               {/* Header */}
               <div className="flex items-center justify-between mb-4">
-                <span className="text-[10px] font-mono" style={{ color: 'var(--text-very-muted)' }}>
+                <span className="text-[12px] font-mono" style={{ color: 'var(--text-very-muted)' }}>
                   {exp.id} · {exp.year}
                 </span>
                 <span
-                  className="text-[9px] uppercase font-mono font-semibold px-2 py-0.5 rounded"
+                  className="text-[11px] uppercase font-mono font-semibold px-2 py-0.5 rounded"
                   style={{
                     color: exp.badgeColor,
                     background: exp.badgeColor.replace('0.8', '0.1'),
@@ -125,12 +125,12 @@ const ProjectsSection = () => {
                 {exp.title}
               </h3>
               {'headline' in exp && (
-                <p className="text-[10px] font-mono mt-1" style={{ color: '#B97FFF', letterSpacing: '0.5px' }}>
+                <p className="text-[12px] font-mono mt-1" style={{ color: '#B97FFF', letterSpacing: '0.5px' }}>
                   {exp.headline}
                 </p>
               )}
 
-              <p className="mt-2 text-[11px] font-mono leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+              <p className="mt-2 text-[13px] font-mono leading-relaxed" style={{ color: 'var(--text-muted)' }}>
                 {exp.desc}
               </p>
 
@@ -138,7 +138,7 @@ const ProjectsSection = () => {
               <div className="mt-5 space-y-3">
                 {exp.metrics.map((m) => (
                   <div key={m.label}>
-                    <div className="flex justify-between text-[9px] font-mono mb-1">
+                    <div className="flex justify-between text-[11px] font-mono mb-1">
                       <span style={{ color: 'var(--text-very-muted)' }}>{m.label}</span>
                       <span style={{ color: '#E040FB' }}>{m.display}</span>
                     </div>
@@ -160,7 +160,7 @@ const ProjectsSection = () => {
                 {exp.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[9px] font-mono px-2 py-1 rounded"
+                    className="text-[11px] font-mono px-2 py-1 rounded"
                     style={{
                       background: 'rgba(120,100,255,0.07)',
                       color: 'var(--text-very-muted)',
@@ -175,7 +175,7 @@ const ProjectsSection = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 font-mono transition-all hover:border-[rgba(185,127,255,0.4)] hover:text-[#B97FFF]"
                   style={{
-                    fontSize: 10,
+                    fontSize: 12,
                     letterSpacing: 1,
                     textTransform: 'uppercase',
                     color: 'rgba(185,127,255,0.7)',
