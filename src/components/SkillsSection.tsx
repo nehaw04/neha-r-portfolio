@@ -73,7 +73,7 @@ const SkillsSection = () => {
                       style={{ background: cat.color }}
                     />
                     <span
-                      className="text-[12px] font-mono group-hover:text-[#E040FB] transition-colors"
+                      className="text-[14px] font-mono group-hover:text-[#E040FB] transition-colors"
                       style={{ color: 'var(--text-muted)' }}
                     >
                       {item}
