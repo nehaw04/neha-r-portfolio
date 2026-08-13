@@ -45,12 +45,12 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div
-              className="w-7 h-7 rounded-md flex items-center justify-center text-[10px] font-bold text-white"
+              className="w-7 h-7 rounded-md flex items-center justify-center text-[12px] font-bold text-white"
               style={{ background: 'linear-gradient(135deg, #7B5EA7, #E040FB)' }}
             >
               NR
             </div>
-            <span className="text-xs font-mono hidden sm:inline" style={{ color: 'var(--text-muted)' }}>
+            <span className="text-sm font-mono hidden sm:inline" style={{ color: 'var(--text-muted)' }}>
               neha_r.model
             </span>
           </div>
@@ -65,7 +65,7 @@ const Navigation = () => {
                   onClick={() => handleClick(link.href)}
                   className="px-4 py-1.5 rounded-md transition-all duration-200"
                   style={{
-                    fontSize: 10,
+                    fontSize: 12,
                     letterSpacing: '1.5px',
                     textTransform: 'uppercase' as const,
                     color: isActive ? '#E040FB' : 'rgba(226,224,255,0.3)',
@@ -82,7 +82,7 @@ const Navigation = () => {
           {/* Right */}
           <div className="flex items-center gap-3 sm:gap-4">
             <div
-              className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full text-[10px] uppercase"
+              className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full text-[12px] uppercase"
               style={{
                 letterSpacing: '1px',
                 border: '1px solid rgba(95,255,160,0.2)',
@@ -97,7 +97,7 @@ const Navigation = () => {
             </div>
             <button
               onClick={() => setModalOpen(true)}
-              className="px-3 sm:px-4 py-1.5 rounded-lg text-white text-[11px] font-semibold uppercase tracking-wider transition-transform hover:scale-[1.04]"
+              className="px-3 sm:px-4 py-1.5 rounded-lg text-white text-[13px] font-semibold uppercase tracking-wider transition-transform hover:scale-[1.04]"
               style={{ background: 'linear-gradient(135deg, #7B5EA7, #E040FB)' }}
             >
               Deploy Me →
