@@ -4,9 +4,9 @@ import { useEffect, useState, useRef } from 'react';
 const roles = ['AI ENGINEER', 'ML ENGINEER', 'NLP ENGINEER', 'MODEL BUILDER', 'SYSTEM THINKER'];
 
 const metrics = [
-  { label: 'Grad Year', value: '2027', unit: '', delta: '↑ VIT Bhopal' },
   { label: 'AI/ML Projects', value: '10', unit: '+', delta: '↑ shipped & building' },
-  { label: 'Aptitude Solved', value: '300', unit: '+', delta: '↑ logic & quant' },
+  { label: 'Live Deployments', value: '2', unit: '+', delta: '↑ RAG apps in production' },
+  { label: 'Core Focus', value: 'RAG', unit: '/Agents', delta: '↑ LangGraph · LangChain' },
 ];
 
 const epochLog = [
@@ -96,9 +96,10 @@ const HeroSection = () => {
                 color: 'var(--text-muted)',
               }}
             >
-              Integrated M.Tech Student at <b style={{ color: '#E040FB' }}>VIT Bhopal</b>. Engineering intelligent systems with{' '}
-              <i style={{ color: '#B97FFF' }}>Agentic AI, RAG</i>, and scalable{' '}
-              <b style={{ color: '#E040FB' }}>Full-Stack architectures</b>.
+              <b style={{ color: '#E040FB' }}>AI Engineer</b> building production-grade{' '}
+              <i style={{ color: '#B97FFF' }}>Agentic AI &amp; RAG systems</i> — LangGraph state machines, vector retrieval with Pinecone,
+              and FastAPI services shipped as live, hallucination-safe products. Integrated M.Tech in AI at{' '}
+              <b style={{ color: '#E040FB' }}>VIT Bhopal</b> · graduating 2027.
             </p>
 
             {/* Buttons */}
