@@ -4,9 +4,9 @@ import { useEffect, useState, useRef } from 'react';
 const roles = ['AI ENGINEER', 'ML ENGINEER', 'NLP ENGINEER', 'MODEL BUILDER', 'SYSTEM THINKER'];
 
 const metrics = [
-  { label: 'Grad Year', value: '2027', unit: '', delta: '↑ VIT Bhopal' },
   { label: 'AI/ML Projects', value: '10', unit: '+', delta: '↑ shipped & building' },
-  { label: 'Aptitude Solved', value: '300', unit: '+', delta: '↑ logic & quant' },
+  { label: 'Live Deployments', value: '2', unit: '+', delta: '↑ RAG apps in production' },
+  { label: 'Core Focus', value: 'RAG', unit: '/Agents', delta: '↑ LangGraph · LangChain' },
 ];
 
 const epochLog = [
@@ -43,6 +43,23 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
           {/* Left Column */}
           <div className="lg:col-span-3">
+            {/* Availability pill */}
+            <div
+              className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full font-mono text-[12px]"
+              style={{
+                border: '1px solid rgba(95,255,160,0.25)',
+                background: 'rgba(95,255,160,0.06)',
+                color: '#5FFFA0',
+                letterSpacing: '0.5px',
+              }}
+            >
+              <span className="relative w-2 h-2">
+                <span className="absolute inset-0 rounded-full bg-[#5FFFA0] mint-pulse" />
+                <span className="relative block w-2 h-2 rounded-full bg-[#5FFFA0]" />
+              </span>
+              Open to AI / ML Engineer roles &amp; internships
+            </div>
+
             {/* Name */}
             <h1 style={{ fontFamily: 'Outfit', fontSize: 'clamp(40px, 6vw, 72px)', fontWeight: 900, lineHeight: 1.05 }}>
               <span className="block text-white">NEHA R.</span>
@@ -96,9 +113,10 @@ const HeroSection = () => {
                 color: 'var(--text-muted)',
               }}
             >
-              Integrated M.Tech Student at <b style={{ color: '#E040FB' }}>VIT Bhopal</b>. Engineering intelligent systems with{' '}
-              <i style={{ color: '#B97FFF' }}>Agentic AI, RAG</i>, and scalable{' '}
-              <b style={{ color: '#E040FB' }}>Full-Stack architectures</b>.
+              <b style={{ color: '#E040FB' }}>AI Engineer</b> building production-grade{' '}
+              <i style={{ color: '#B97FFF' }}>Agentic AI &amp; RAG systems</i> — LangGraph state machines, vector retrieval with Pinecone,
+              and FastAPI services shipped as live, hallucination-safe products. Integrated M.Tech in AI at{' '}
+              <b style={{ color: '#E040FB' }}>VIT Bhopal</b> · graduating 2027.
             </p>
 
             {/* Buttons */}
@@ -110,6 +128,19 @@ const HeroSection = () => {
               >
                 View Experiments →
               </button>
+              <a
+                href="https://agentic-ai-ebook-assistant.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-[9px] text-[13px] font-semibold uppercase tracking-wider transition-all text-center hover:border-[#5FFFA0]"
+                style={{
+                  border: '1px solid rgba(95,255,160,0.3)',
+                  color: '#5FFFA0',
+                  background: 'rgba(95,255,160,0.06)',
+                }}
+              >
+                Try Live RAG Demo ↗
+              </a>
               <a
                 href="/resume.pdf"
                 target="_blank"
