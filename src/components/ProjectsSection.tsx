@@ -16,6 +16,7 @@ const experiments = [
     ],
     tags: ['LangGraph', 'Pinecone', 'Gemini 2.5 Flash', 'FastAPI', 'Gradio', 'RAG'],
     github: 'https://github.com/nehaw04/Agentic-AI-eBook-Assistant',
+    liveDemo: 'https://agentic-ai-ebook-assistant.onrender.com/',
   },
   {
     id: 'EXP-002',
