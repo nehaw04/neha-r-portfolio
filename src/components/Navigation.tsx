@@ -68,7 +68,7 @@ const Navigation = () => {
                     fontSize: 12,
                     letterSpacing: '1.5px',
                     textTransform: 'uppercase' as const,
-                    color: isActive ? '#E040FB' : 'rgba(226,224,255,0.3)',
+                    color: isActive ? '#E040FB' : 'rgba(226,224,255,0.62)',
                     background: isActive ? 'rgba(224,64,251,0.08)' : 'transparent',
                     border: isActive ? '1px solid rgba(224,64,251,0.3)' : '1px solid transparent',
                   }}
