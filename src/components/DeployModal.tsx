@@ -56,7 +56,7 @@ const DeployModal = ({ open, onClose }: DeployModalProps) => {
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-lg transition-colors hover:text-white"
-          style={{ color: 'rgba(226,224,255,0.3)' }}
+          style={{ color: 'rgba(226,224,255,0.62)' }}
         >
           ✕
         </button>

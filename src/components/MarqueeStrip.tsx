@@ -25,7 +25,7 @@ const MarqueeStrip = () => {
                 fontSize: 12,
                 textTransform: 'uppercase',
                 letterSpacing: '2px',
-                color: 'rgba(226,224,255,0.15)',
+                color: 'rgba(226,224,255,0.4)',
               }}
             >
               {tag}

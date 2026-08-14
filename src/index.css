@@ -41,9 +41,9 @@
     --purple: #B97FFF;
     --mint: #5FFFA0;
     --text-primary: #E2E0FF;
-    --text-muted: rgba(226, 224, 255, 0.38);
-    --text-very-muted: rgba(226, 224, 255, 0.25);
-    --text-whisper: rgba(226, 224, 255, 0.12);
+    --text-muted: rgba(226, 224, 255, 0.72);
+    --text-very-muted: rgba(226, 224, 255, 0.55);
+    --text-whisper: rgba(226, 224, 255, 0.32);
     --card-bg: rgba(255, 255, 255, 0.02);
     --card-hover-bg: rgba(185, 127, 255, 0.04);
     --border-default: rgba(120, 100, 255, 0.12);
