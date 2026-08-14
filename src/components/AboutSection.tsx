@@ -48,7 +48,7 @@ const LayerCard = ({ layer, index }: { layer: typeof layers[0]; index: number })
           borderRight: '1px solid var(--border-default)',
         }}
       >
-        <span style={{ fontFamily: 'Outfit', fontSize: 18, color: 'rgba(185,127,255,0.4)' }}>
+        <span style={{ fontFamily: 'Outfit', fontSize: 18, color: 'rgba(185,127,255,0.8)' }}>
           {layer.index}
         </span>
         <span
