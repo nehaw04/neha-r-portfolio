@@ -43,6 +43,23 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
           {/* Left Column */}
           <div className="lg:col-span-3">
+            {/* Availability pill */}
+            <div
+              className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full font-mono text-[12px]"
+              style={{
+                border: '1px solid rgba(95,255,160,0.25)',
+                background: 'rgba(95,255,160,0.06)',
+                color: '#5FFFA0',
+                letterSpacing: '0.5px',
+              }}
+            >
+              <span className="relative w-2 h-2">
+                <span className="absolute inset-0 rounded-full bg-[#5FFFA0] mint-pulse" />
+                <span className="relative block w-2 h-2 rounded-full bg-[#5FFFA0]" />
+              </span>
+              Open to AI / ML Engineer roles &amp; internships
+            </div>
+
             {/* Name */}
             <h1 style={{ fontFamily: 'Outfit', fontSize: 'clamp(40px, 6vw, 72px)', fontWeight: 900, lineHeight: 1.05 }}>
               <span className="block text-white">NEHA R.</span>
@@ -111,6 +128,19 @@ const HeroSection = () => {
               >
                 View Experiments →
               </button>
+              <a
+                href="https://agentic-ai-ebook-assistant.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-[9px] text-[13px] font-semibold uppercase tracking-wider transition-all text-center hover:border-[#5FFFA0]"
+                style={{
+                  border: '1px solid rgba(95,255,160,0.3)',
+                  color: '#5FFFA0',
+                  background: 'rgba(95,255,160,0.06)',
+                }}
+              >
+                Try Live RAG Demo ↗
+              </a>
               <a
                 href="/resume.pdf"
                 target="_blank"
