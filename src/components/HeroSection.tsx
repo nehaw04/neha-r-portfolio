@@ -153,6 +153,13 @@ const HeroSection = () => {
               >
                 Download CV
               </a>
+              <button
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-6 py-3 rounded-[9px] text-white text-[13px] font-semibold uppercase tracking-wider transition-transform hover:scale-[1.04]"
+                style={{ background: 'linear-gradient(135deg, #5FFFA0, #00C896)' }}
+              >
+                Contact Me ↓
+              </button>
             </div>
           </div>
 
